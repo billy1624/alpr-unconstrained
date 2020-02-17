@@ -3,3 +3,5 @@
 *.so
 *.csv
 data/
+_output/
+_sample/

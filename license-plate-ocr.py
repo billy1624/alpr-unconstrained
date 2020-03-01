@@ -15,8 +15,8 @@ from src.utils 				import nms
 if __name__ == '__main__':
 
 	try:
-	
-		input_dir  = sys.argv[1]
+
+		input_dir  = sys.argv[1] + '_tmp'
 		output_dir = input_dir
 
 		ocr_threshold = .4
@@ -33,6 +33,16 @@ if __name__ == '__main__':
 		print 'Performing OCR...'
 
 		for i,img_path in enumerate(imgs_paths):
+
+			# /tmp/output_img_20200301_mix_tmp/20200114_221658_0car_lp.txt
+			# [[0.30671  0.696869 0.706321 0.316162]
+			#  [0.574803 0.526937 0.659712 0.707579]]
+			# [[696.7229943  816.42938529 815.98953454 696.28314355]
+			#  [718.95660457 718.55229915 750.58574764 750.99005306]]
+			# 0 (696, 718) (816, 718)
+			# 1 (816, 718) (815, 750)
+			# 2 (815, 750) (696, 750)
+			# 3 (696, 750) (696, 718)
 
 			print '\tScanning %s' % img_path
 

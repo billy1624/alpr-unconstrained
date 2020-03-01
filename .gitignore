@@ -2,6 +2,7 @@
 *.a
 *.so
 *.csv
+.vscode/
 data/
 _output/
 _sample/

@@ -3,19 +3,29 @@ import cv2
 import numpy as np
 
 from glob						import glob
-from os.path 					import splitext, basename, isfile
+from os.path 					import splitext, basename, isfile, isdir
+from os 						import makedirs
 from src.utils 					import crop_region, image_files_from_folder
 from src.drawing_utils			import draw_label, draw_losangle, write2img
 from src.label 					import lread, Label, readShapes
+from math						import sqrt
 
 from pdb import set_trace as pause
+
+
+def dist(pt0, pt1):  
+	return sqrt((pt0[0] - pt1[0])**2 + (pt0[1] - pt1[1])**2)
 
 
 YELLOW = (  0,255,255)
 RED    = (  0,  0,255)
 
 input_dir = sys.argv[1]
-output_dir = sys.argv[2]
+tmp_dir = sys.argv[2] + '_tmp'
+output_dir = sys.argv[2] + '_out'
+
+if not isdir(output_dir):
+	makedirs(output_dir)
 
 img_files = image_files_from_folder(input_dir)
 
@@ -25,11 +35,11 @@ for img_file in img_files:
 
 	I = cv2.imread(img_file)
 
-	detected_cars_labels = '%s/%s_cars.txt' % (output_dir,bname)
+	detected_cars_labels = '%s/%s_cars.txt' % (tmp_dir,bname)
 
 	Lcar = lread(detected_cars_labels)
 
-	sys.stdout.write('%s' % bname)
+	# sys.stdout.write('%s' % bname)
 
 	if Lcar:
 
@@ -37,8 +47,8 @@ for img_file in img_files:
 
 			draw_label(I,lcar,color=YELLOW,thickness=3)
 
-			lp_label 		= '%s/%s_%dcar_lp.txt'		% (output_dir,bname,i)
-			lp_label_str 	= '%s/%s_%dcar_lp_str.txt'	% (output_dir,bname,i)
+			lp_label 		= '%s/%s_%dcar_lp.txt'		% (tmp_dir,bname,i)
+			lp_label_str 	= '%s/%s_%dcar_lp_str.txt'	% (tmp_dir,bname,i)
 
 			if isfile(lp_label):
 
@@ -47,15 +57,30 @@ for img_file in img_files:
 				ptspx = pts*np.array(I.shape[1::-1],dtype=float).reshape(2,1)
 				draw_losangle(I,ptspx,RED,3)
 
+				print ""
+				print ""
+				print lp_label
+
+				pts = Llp_shapes[0].pts
+				pt0 = (pts[0,0], pts[1,0])
+				pt1 = (pts[0,1], pts[1,1])
+				pt2 = (pts[0,2], pts[1,2])
+				width = dist(pt0, pt1)
+				height = dist(pt1, pt2)
+				ratio = width / height
+				print width
+				print height
+				print ratio
+
 				if isfile(lp_label_str):
 					with open(lp_label_str,'r') as f:
 						lp_str = f.read().strip()
 					llp = Label(0,tl=pts.min(1),br=pts.max(1))
 					write2img(I,llp,lp_str)
 
-					sys.stdout.write(',%s' % lp_str)
+					# sys.stdout.write(',%s' % lp_str)
 
 	cv2.imwrite('%s/%s_output.png' % (output_dir,bname),I)
-	sys.stdout.write('\n')
+	# sys.stdout.write('\n')
 
 

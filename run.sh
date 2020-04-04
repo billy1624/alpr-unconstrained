@@ -90,14 +90,14 @@ set -e
 # python vehicle-detection.py $input_dir $output_dir
 
 # Detect license plates
-# python license-plate-detection.py $output_dir $lp_model
+# python license-plate-detection.py $output_dir $lp_model $input_dir
 
 # OCR
-# python license-plate-ocr.py $output_dir
+python license-plate-ocr.py $output_dir
 
 # Draw output and generate list
-# python gen-outputs.py $input_dir $output_dir > $csv_file
-python gen-outputs.py $input_dir $output_dir
+python gen-outputs.py $input_dir $output_dir > $csv_file
+# python gen-outputs.py $input_dir $output_dir
 
 # Clean files and draw output
 # rm $output_dir/*_lp.png

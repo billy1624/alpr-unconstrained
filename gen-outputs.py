@@ -39,7 +39,7 @@ for img_file in img_files:
 
 	Lcar = lread(detected_cars_labels)
 
-	# sys.stdout.write('%s' % bname)
+	sys.stdout.write('%s' % bname)
 
 	if Lcar:
 
@@ -57,20 +57,25 @@ for img_file in img_files:
 				ptspx = pts*np.array(I.shape[1::-1],dtype=float).reshape(2,1)
 				draw_losangle(I,ptspx,RED,3)
 
-				print ""
-				print ""
-				print lp_label
 
-				pts = Llp_shapes[0].pts
-				pt0 = (pts[0,0], pts[1,0])
-				pt1 = (pts[0,1], pts[1,1])
-				pt2 = (pts[0,2], pts[1,2])
-				width = dist(pt0, pt1)
-				height = dist(pt1, pt2)
-				ratio = width / height
-				print width
-				print height
-				print ratio
+				# print ""
+				# print ""
+				# print lp_label
+
+				# print I.shape
+				# print I.shape[1::-1]
+
+				# pt0 = (ptspx[0,0], ptspx[1,0])
+				# pt1 = (ptspx[0,1], ptspx[1,1])
+				# pt2 = (ptspx[0,2], ptspx[1,2])
+				# width = dist(pt0, pt1)
+				# height = dist(pt1, pt2)
+				# ratio = width / height
+				# print width
+				# print height
+				# print ratio
+				# if ratio < 2:
+				# 	print "Two Lined!"
 
 				if isfile(lp_label_str):
 					with open(lp_label_str,'r') as f:
@@ -78,9 +83,9 @@ for img_file in img_files:
 					llp = Label(0,tl=pts.min(1),br=pts.max(1))
 					write2img(I,llp,lp_str)
 
-					# sys.stdout.write(',%s' % lp_str)
+					sys.stdout.write(',%s' % lp_str)
 
 	cv2.imwrite('%s/%s_output.png' % (output_dir,bname),I)
-	# sys.stdout.write('\n')
+	sys.stdout.write('\n')
 
 

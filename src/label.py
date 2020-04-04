@@ -97,10 +97,11 @@ def dknet_label_conversion(R,img_width,img_height):
 
 class Shape():
 
-	def __init__(self,pts=np.zeros((2,0)),max_sides=4,text=''):
+	def __init__(self,pts=np.zeros((2,0)),max_sides=4,text='',two_lined=False):
 		self.pts = pts
 		self.max_sides = max_sides
 		self.text = text
+		self.two_lined = two_lined
 
 	def isValid(self):
 		return self.pts.shape[1] > 2
@@ -110,6 +111,7 @@ class Shape():
 		ptsarray = self.pts.flatten()
 		fp.write(''.join([('%f,' % value) for value in ptsarray]))
 		fp.write('%s,' % self.text)
+		fp.write('%s,' % self.two_lined)
 		fp.write('\n')
 
 	def read(self,line):
@@ -117,8 +119,10 @@ class Shape():
 		ss 			= int(data[0])
 		values 		= data[1:(ss*2 + 1)]
 		text 		= data[(ss*2 + 1)] if len(data) >= (ss*2 + 2) else ''
+		two_lined   = data[-2] == 'True'
 		self.pts 	= np.array([float(value) for value in values]).reshape((2,ss))
 		self.text   = text
+		self.two_lined = two_lined
 
 def readShapes(path,obj_type=Shape):
 	shapes = []

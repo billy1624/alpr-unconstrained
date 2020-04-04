@@ -1,0 +1,280 @@
+user@ubuntuvm:~/alpr-unconstrained$ bash run.sh -i samples/data_20200310 -o /tmp/output_data_20200310 -c /tmp/output_data_20200310/results.csv
+layer     filters    size              input                output
+    0 conv     32  3 x 3 / 1   416 x 416 x   3   ->   416 x 416 x  32  0.299 BFLOPs
+    1 max          2 x 2 / 2   416 x 416 x  32   ->   208 x 208 x  32
+    2 conv     64  3 x 3 / 1   208 x 208 x  32   ->   208 x 208 x  64  1.595 BFLOPs
+    3 max          2 x 2 / 2   208 x 208 x  64   ->   104 x 104 x  64
+    4 conv    128  3 x 3 / 1   104 x 104 x  64   ->   104 x 104 x 128  1.595 BFLOPs
+    5 conv     64  1 x 1 / 1   104 x 104 x 128   ->   104 x 104 x  64  0.177 BFLOPs
+    6 conv    128  3 x 3 / 1   104 x 104 x  64   ->   104 x 104 x 128  1.595 BFLOPs
+    7 max          2 x 2 / 2   104 x 104 x 128   ->    52 x  52 x 128
+    8 conv    256  3 x 3 / 1    52 x  52 x 128   ->    52 x  52 x 256  1.595 BFLOPs
+    9 conv    128  1 x 1 / 1    52 x  52 x 256   ->    52 x  52 x 128  0.177 BFLOPs
+   10 conv    256  3 x 3 / 1    52 x  52 x 128   ->    52 x  52 x 256  1.595 BFLOPs
+   11 max          2 x 2 / 2    52 x  52 x 256   ->    26 x  26 x 256
+   12 conv    512  3 x 3 / 1    26 x  26 x 256   ->    26 x  26 x 512  1.595 BFLOPs
+   13 conv    256  1 x 1 / 1    26 x  26 x 512   ->    26 x  26 x 256  0.177 BFLOPs
+   14 conv    512  3 x 3 / 1    26 x  26 x 256   ->    26 x  26 x 512  1.595 BFLOPs
+   15 conv    256  1 x 1 / 1    26 x  26 x 512   ->    26 x  26 x 256  0.177 BFLOPs
+   16 conv    512  3 x 3 / 1    26 x  26 x 256   ->    26 x  26 x 512  1.595 BFLOPs
+   17 max          2 x 2 / 2    26 x  26 x 512   ->    13 x  13 x 512
+   18 conv   1024  3 x 3 / 1    13 x  13 x 512   ->    13 x  13 x1024  1.595 BFLOPs
+   19 conv    512  1 x 1 / 1    13 x  13 x1024   ->    13 x  13 x 512  0.177 BFLOPs
+   20 conv   1024  3 x 3 / 1    13 x  13 x 512   ->    13 x  13 x1024  1.595 BFLOPs
+   21 conv    512  1 x 1 / 1    13 x  13 x1024   ->    13 x  13 x 512  0.177 BFLOPs
+   22 conv   1024  3 x 3 / 1    13 x  13 x 512   ->    13 x  13 x1024  1.595 BFLOPs
+   23 conv   1024  3 x 3 / 1    13 x  13 x1024   ->    13 x  13 x1024  3.190 BFLOPs
+   24 conv   1024  3 x 3 / 1    13 x  13 x1024   ->    13 x  13 x1024  3.190 BFLOPs
+   25 route  16
+   26 conv     64  1 x 1 / 1    26 x  26 x 512   ->    26 x  26 x  64  0.044 BFLOPs
+   27 reorg              / 2    26 x  26 x  64   ->    13 x  13 x 256
+   28 route  27 24
+   29 conv   1024  3 x 3 / 1    13 x  13 x1280   ->    13 x  13 x1024  3.987 BFLOPs
+   30 conv    125  1 x 1 / 1    13 x  13 x1024   ->    13 x  13 x 125  0.043 BFLOPs
+   31 detection
+mask_scale: Using default '1.000000'
+Loading weights from data/vehicle-detector/yolo-voc.weights...Done!
+Searching for vehicles using YOLO...
+	Scanning samples/data_20200310/20200310_105734.jpg
+		2 cars found
+	Scanning samples/data_20200310/20200310_110415.jpg
+		1 cars found
+	Scanning samples/data_20200310/20200310_110613.jpg
+		3 cars found
+	Scanning samples/data_20200310/20200310_112150.jpg
+		2 cars found
+	Scanning samples/data_20200310/20200310_113714.jpg
+		3 cars found
+	Scanning samples/data_20200310/20200310_114324.jpg
+		1 cars found
+	Scanning samples/data_20200310/20200310_120922.jpg
+		1 cars found
+	Scanning samples/data_20200310/20200310_134528.jpg
+		1 cars found
+	Scanning samples/data_20200310/20200310_144907.jpg
+		2 cars found
+	Scanning samples/data_20200310/20200310_173741.jpg
+		2 cars found
+	Scanning samples/data_20200310/20200310_173817.jpg
+		2 cars found
+	Scanning samples/data_20200310/20200310_174134.jpg
+		1 cars found
+	Scanning samples/data_20200310/20200310_174239.jpg
+		2 cars found
+	Scanning samples/data_20200310/20200310_174927.jpg
+		2 cars found
+	Scanning samples/data_20200310/20200310_175227.jpg
+		1 cars found
+	Scanning samples/data_20200310/20200310_175327.jpg
+		1 cars found
+	Scanning samples/data_20200310/20200310_182627.jpg
+		1 cars found
+Using TensorFlow backend.
+2020-03-10 22:01:06.803346: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1
+Searching for license plates using WPOD-NET
+	 Processing /tmp/output_data_20200310_tmp/20200310_134528_0car.png
+		Bound dim: 312, ratio: 1.044809
+(1200, 1600)
+[[ 398.00168185  836.22971462  849.4844152   411.25638243]
+ [1007.80769441 1055.33954521 1223.55501377 1176.02316297]]
+440.798236779
+168.736868974
+2.61234097478
+	 Processing /tmp/output_data_20200310_tmp/20200310_174239_1car.png
+		Bound dim: 442, ratio: 1.518732
+!! License Plate NOT Found !!
+	 Processing /tmp/output_data_20200310_tmp/20200310_144907_1car.png
+		Bound dim: 328, ratio: 1.100478
+!! License Plate NOT Found !!
+	 Processing /tmp/output_data_20200310_tmp/20200310_175327_0car.png
+		Bound dim: 418, ratio: 1.420266
+(1200, 1600)
+[[581.38711285 869.64172277 872.63189357 584.37728365]
+ [869.84197593 873.58025334 943.82858479 940.09030738]]
+288.27884913
+70.3119420364
+4.09999838976
+	 Processing /tmp/output_data_20200310_tmp/20200310_112150_0car.png
+		Bound dim: 356, ratio: 1.230352
+(1200, 1600)
+[[ 443.29880807  841.49619036  839.69270435  441.49532207]
+ [1242.40209183 1254.15361417 1355.34839908 1343.59687673]]
+398.370748844
+101.210854425
+3.93604768091
+	 Processing /tmp/output_data_20200310_tmp/20200310_174134_0car.png
+		Bound dim: 330, ratio: 1.129252
+(1200, 1600)
+[[ 434.40218259  824.14495732  826.23059464  436.48781992]
+ [1008.67385824 1044.324041   1220.48923342 1184.83905067]]
+391.369858298
+176.177538028
+2.22145151237
+	 Processing /tmp/output_data_20200310_tmp/20200310_112150_1car.png
+		Bound dim: 326, ratio: 1.124105
+!! License Plate NOT Found !!
+	 Processing /tmp/output_data_20200310_tmp/20200310_105734_1car.png
+		Bound dim: 448, ratio: 1.558989
+!! License Plate NOT Found !!
+	 Processing /tmp/output_data_20200310_tmp/20200310_110415_0car.png
+		Bound dim: 444, ratio: 1.494424
+!! License Plate NOT Found !!
+	 Processing /tmp/output_data_20200310_tmp/20200310_173817_0car.png
+		Bound dim: 452, ratio: 1.537175
+(1200, 1600)
+[[583.22943277 867.13098359 867.38524609 583.48369526]
+ [874.70175724 877.43094982 942.19626827 939.46707568]]
+283.914668611
+64.7658175495
+4.38371164533
+	 Processing /tmp/output_data_20200310_tmp/20200310_110613_0car.png
+		Bound dim: 410, ratio: 1.381206
+(1200, 1600)
+[[538.19024309 820.22491356 824.67691399 542.64224352]
+ [884.01691247 885.97286403 954.94019661 952.98424505]]
+282.04145279
+69.1108766481
+4.08099949631
+	 Processing /tmp/output_data_20200310_tmp/20200310_173741_1car.png
+		Bound dim: 296, ratio: 1.015707
+!! License Plate NOT Found !!
+	 Processing /tmp/output_data_20200310_tmp/20200310_110613_1car.png
+		Bound dim: 320, ratio: 1.086047
+!! License Plate NOT Found !!
+	 Processing /tmp/output_data_20200310_tmp/20200310_144907_0car.png
+		Bound dim: 360, ratio: 1.236167
+(1200, 1600)
+[[ 444.49575399  840.96491741  839.44457999  442.97541657]
+ [1242.15352426 1253.83271199 1356.72620567 1345.04701793]]
+396.641148857
+102.90472519
+3.85445029979
+	 Processing /tmp/output_data_20200310_tmp/20200310_173741_0car.png
+		Bound dim: 458, ratio: 1.575558
+!! License Plate NOT Found !!
+	 Processing /tmp/output_data_20200310_tmp/20200310_113714_2car.png
+		Bound dim: 382, ratio: 1.276451
+!! License Plate NOT Found !!
+	 Processing /tmp/output_data_20200310_tmp/20200310_174927_1car.png
+		Bound dim: 296, ratio: 1.015521
+!! License Plate NOT Found !!
+	 Processing /tmp/output_data_20200310_tmp/20200310_113714_0car.png
+		Bound dim: 424, ratio: 1.431616
+(1200, 1600)
+[[544.57963788 819.56659771 821.63741447 546.65045463]
+ [882.48312708 882.8933514  947.56979957 947.15957526]]
+274.98726582
+64.7095914919
+4.24955960129
+	 Processing /tmp/output_data_20200310_tmp/20200310_114324_0car.png
+		Bound dim: 334, ratio: 1.110577
+(1200, 1600)
+[[ 451.902271    856.05434151  855.0249147   450.87284419]
+ [1028.84726109 1054.59930542 1224.8712013  1199.11915697]]
+404.971682819
+170.275007699
+2.37833894881
+	 Processing /tmp/output_data_20200310_tmp/20200310_174239_0car.png
+		Bound dim: 294, ratio: 1.012195
+(1200, 1600)
+[[398.75335588 509.13354443 500.72277149 390.34258294]
+ [882.71829784 872.82874954 945.09737015 954.98691844]]
+110.822331642
+72.7564060795
+1.5231968924
+! Two Lined !
+	 Processing /tmp/output_data_20200310_tmp/20200310_174927_0car.png
+		Bound dim: 486, ratio: 1.679325
+!! License Plate NOT Found !!
+	 Processing /tmp/output_data_20200310_tmp/20200310_110613_2car.png
+		Bound dim: 370, ratio: 1.253521
+!! License Plate NOT Found !!
+	 Processing /tmp/output_data_20200310_tmp/20200310_105734_0car.png
+		Bound dim: 318, ratio: 1.054930
+(1200, 1600)
+[[385.61481615 491.28625267 495.547075   389.87563848]
+ [885.72398077 874.69429316 948.65815954 959.68784714]]
+106.245501106
+74.0864909147
+1.43407387493
+! Two Lined !
+	 Processing /tmp/output_data_20200310_tmp/20200310_113714_1car.png
+		Bound dim: 292, ratio: 1.008715
+!! License Plate NOT Found !!
+	 Processing /tmp/output_data_20200310_tmp/20200310_173817_1car.png
+		Bound dim: 292, ratio: 1.008130
+!! License Plate NOT Found !!
+	 Processing /tmp/output_data_20200310_tmp/20200310_175227_0car.png
+		Bound dim: 486, ratio: 1.649402
+(1200, 1600)
+[[597.34109407 769.8246764  757.77446928 585.29088695]
+ [875.94971261 874.19378511 933.27878719 935.03471469]]
+172.492520001
+60.3012849141
+2.86051151724
+	 Processing /tmp/output_data_20200310_tmp/20200310_182627_0car.png
+		Bound dim: 410, ratio: 1.406736
+(1200, 1600)
+[[615.55857445 802.90144083 803.3370233  615.99415692]
+ [816.83371851 812.72908603 857.72007991 861.82471239]]
+187.387826685
+44.9931023828
+4.16481231035
+	 Processing /tmp/output_data_20200310_tmp/20200310_120922_0car.png
+		Bound dim: 326, ratio: 1.123047
+(1200, 1600)
+[[ 476.27677348  880.87122966  865.21252718  460.618071  ]
+ [1027.65310792 1038.28848904 1215.81133132 1205.17595019]]
+404.73421563
+178.212105349
+2.27108150054
+layer     filters    size              input                output
+    0 conv     32  3 x 3 / 1   240 x  80 x   3   ->   240 x  80 x  32  0.033 BFLOPs
+    1 max          2 x 2 / 2   240 x  80 x  32   ->   120 x  40 x  32
+    2 conv     64  3 x 3 / 1   120 x  40 x  32   ->   120 x  40 x  64  0.177 BFLOPs
+    3 max          2 x 2 / 2   120 x  40 x  64   ->    60 x  20 x  64
+    4 conv    128  3 x 3 / 1    60 x  20 x  64   ->    60 x  20 x 128  0.177 BFLOPs
+    5 conv     64  1 x 1 / 1    60 x  20 x 128   ->    60 x  20 x  64  0.020 BFLOPs
+    6 conv    128  3 x 3 / 1    60 x  20 x  64   ->    60 x  20 x 128  0.177 BFLOPs
+    7 max          2 x 2 / 2    60 x  20 x 128   ->    30 x  10 x 128
+    8 conv    256  3 x 3 / 1    30 x  10 x 128   ->    30 x  10 x 256  0.177 BFLOPs
+    9 conv    128  1 x 1 / 1    30 x  10 x 256   ->    30 x  10 x 128  0.020 BFLOPs
+   10 conv    256  3 x 3 / 1    30 x  10 x 128   ->    30 x  10 x 256  0.177 BFLOPs
+   11 conv    512  3 x 3 / 1    30 x  10 x 256   ->    30 x  10 x 512  0.708 BFLOPs
+   12 conv    256  3 x 3 / 1    30 x  10 x 512   ->    30 x  10 x 256  0.708 BFLOPs
+   13 conv    512  3 x 3 / 1    30 x  10 x 256   ->    30 x  10 x 512  0.708 BFLOPs
+   14 conv     80  1 x 1 / 1    30 x  10 x 512   ->    30 x  10 x  80  0.025 BFLOPs
+   15 detection
+mask_scale: Using default '1.000000'
+Loading weights from data/ocr/ocr-net.weights...Done!
+Performing OCR...
+	Scanning /tmp/output_data_20200310_tmp/20200310_105734_0car_lp.png
+! Two Lined !
+		LP: 7
+	Scanning /tmp/output_data_20200310_tmp/20200310_110613_0car_lp.png
+		LP: PU7663
+	Scanning /tmp/output_data_20200310_tmp/20200310_112150_0car_lp.png
+		LP: KV6389
+	Scanning /tmp/output_data_20200310_tmp/20200310_113714_0car_lp.png
+		LP: PU7663
+	Scanning /tmp/output_data_20200310_tmp/20200310_114324_0car_lp.png
+		LP: 5319
+	Scanning /tmp/output_data_20200310_tmp/20200310_120922_0car_lp.png
+		LP: 5L39
+	Scanning /tmp/output_data_20200310_tmp/20200310_134528_0car_lp.png
+		LP: 539
+	Scanning /tmp/output_data_20200310_tmp/20200310_144907_0car_lp.png
+		LP: KV6389
+	Scanning /tmp/output_data_20200310_tmp/20200310_173817_0car_lp.png
+		LP: PU7663
+	Scanning /tmp/output_data_20200310_tmp/20200310_174134_0car_lp.png
+		LP: 5GI9
+	Scanning /tmp/output_data_20200310_tmp/20200310_174239_0car_lp.png
+! Two Lined !
+		LP: 7
+	Scanning /tmp/output_data_20200310_tmp/20200310_175227_0car_lp.png
+		LP: PJ7E
+	Scanning /tmp/output_data_20200310_tmp/20200310_175327_0car_lp.png
+		LP: PU7663
+	Scanning /tmp/output_data_20200310_tmp/20200310_182627_0car_lp.png
+		LP: III7I

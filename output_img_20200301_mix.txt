@@ -1,0 +1,1029 @@
+user@ubuntuvm:~/alpr-unconstrained$ bash run.sh -i samples/img_20200301_mix -o /tmp/output_img_20200301_mix -c /tmp/output_img_20200301_mix/results.csv
+layer     filters    size              input                output
+    0 conv     32  3 x 3 / 1   416 x 416 x   3   ->   416 x 416 x  32  0.299 BFLOPs
+    1 max          2 x 2 / 2   416 x 416 x  32   ->   208 x 208 x  32
+    2 conv     64  3 x 3 / 1   208 x 208 x  32   ->   208 x 208 x  64  1.595 BFLOPs
+    3 max          2 x 2 / 2   208 x 208 x  64   ->   104 x 104 x  64
+    4 conv    128  3 x 3 / 1   104 x 104 x  64   ->   104 x 104 x 128  1.595 BFLOPs
+    5 conv     64  1 x 1 / 1   104 x 104 x 128   ->   104 x 104 x  64  0.177 BFLOPs
+    6 conv    128  3 x 3 / 1   104 x 104 x  64   ->   104 x 104 x 128  1.595 BFLOPs
+    7 max          2 x 2 / 2   104 x 104 x 128   ->    52 x  52 x 128
+    8 conv    256  3 x 3 / 1    52 x  52 x 128   ->    52 x  52 x 256  1.595 BFLOPs
+    9 conv    128  1 x 1 / 1    52 x  52 x 256   ->    52 x  52 x 128  0.177 BFLOPs
+   10 conv    256  3 x 3 / 1    52 x  52 x 128   ->    52 x  52 x 256  1.595 BFLOPs
+   11 max          2 x 2 / 2    52 x  52 x 256   ->    26 x  26 x 256
+   12 conv    512  3 x 3 / 1    26 x  26 x 256   ->    26 x  26 x 512  1.595 BFLOPs
+   13 conv    256  1 x 1 / 1    26 x  26 x 512   ->    26 x  26 x 256  0.177 BFLOPs
+   14 conv    512  3 x 3 / 1    26 x  26 x 256   ->    26 x  26 x 512  1.595 BFLOPs
+   15 conv    256  1 x 1 / 1    26 x  26 x 512   ->    26 x  26 x 256  0.177 BFLOPs
+   16 conv    512  3 x 3 / 1    26 x  26 x 256   ->    26 x  26 x 512  1.595 BFLOPs
+   17 max          2 x 2 / 2    26 x  26 x 512   ->    13 x  13 x 512
+   18 conv   1024  3 x 3 / 1    13 x  13 x 512   ->    13 x  13 x1024  1.595 BFLOPs
+   19 conv    512  1 x 1 / 1    13 x  13 x1024   ->    13 x  13 x 512  0.177 BFLOPs
+   20 conv   1024  3 x 3 / 1    13 x  13 x 512   ->    13 x  13 x1024  1.595 BFLOPs
+   21 conv    512  1 x 1 / 1    13 x  13 x1024   ->    13 x  13 x 512  0.177 BFLOPs
+   22 conv   1024  3 x 3 / 1    13 x  13 x 512   ->    13 x  13 x1024  1.595 BFLOPs
+   23 conv   1024  3 x 3 / 1    13 x  13 x1024   ->    13 x  13 x1024  3.190 BFLOPs
+   24 conv   1024  3 x 3 / 1    13 x  13 x1024   ->    13 x  13 x1024  3.190 BFLOPs
+   25 route  16
+   26 conv     64  1 x 1 / 1    26 x  26 x 512   ->    26 x  26 x  64  0.044 BFLOPs
+   27 reorg              / 2    26 x  26 x  64   ->    13 x  13 x 256
+   28 route  27 24
+   29 conv   1024  3 x 3 / 1    13 x  13 x1280   ->    13 x  13 x1024  3.987 BFLOPs
+   30 conv    125  1 x 1 / 1    13 x  13 x1024   ->    13 x  13 x 125  0.043 BFLOPs
+   31 detection
+mask_scale: Using default '1.000000'
+Loading weights from data/vehicle-detector/yolo-voc.weights...Done!
+Searching for vehicles using YOLO...
+	Scanning samples/img_20200301_mix/20190615_010315.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20191106_140004.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20191106_141833_HDR.jpg
+		2 cars found
+	Scanning samples/img_20200301_mix/20200114_220927.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200114_221628.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200114_221658.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200114_221704.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200114_221734.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200114_222257.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200114_222303.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200114_222327.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200114_222451.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200114_222539.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200114_222934.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200116_142401.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200116_142507.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200116_143141.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200116_143235.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200116_143347.jpg
+		2 cars found
+	Scanning samples/img_20200301_mix/20200116_143444.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200116_143942.jpg
+		2 cars found
+	Scanning samples/img_20200301_mix/20200116_144225.jpg
+		2 cars found
+	Scanning samples/img_20200301_mix/20200116_144317.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200116_144532.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200116_144732.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200116_144939.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200116_144946.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200116_145131.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200116_150249.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200116_150605.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200116_150719.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200116_150722.jpg
+		2 cars found
+	Scanning samples/img_20200301_mix/20200116_151355.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200116_151425.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200116_151431.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200121_171722.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200121_171826.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200121_171938.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200121_172214.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200121_172250.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200121_172303.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200121_172426.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/20200121_173700.jpg
+		0 cars found
+	Scanning samples/img_20200301_mix/20200121_173900.jpg
+		2 cars found
+	Scanning samples/img_20200301_mix/20200305_164618.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/web001.jpeg
+		3 cars found
+	Scanning samples/img_20200301_mix/web002.png
+		3 cars found
+	Scanning samples/img_20200301_mix/web003.png
+		4 cars found
+	Scanning samples/img_20200301_mix/web004.jpeg
+		3 cars found
+	Scanning samples/img_20200301_mix/web005.jpeg
+		2 cars found
+	Scanning samples/img_20200301_mix/web006.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/web007.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/web008.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/web009.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/web010.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/web011.jpeg
+		1 cars found
+	Scanning samples/img_20200301_mix/web012.jpeg
+		1 cars found
+	Scanning samples/img_20200301_mix/web013.jpg
+		2 cars found
+	Scanning samples/img_20200301_mix/web014.jpeg
+		2 cars found
+	Scanning samples/img_20200301_mix/web015.jpg
+		2 cars found
+	Scanning samples/img_20200301_mix/web016.jpg
+		2 cars found
+	Scanning samples/img_20200301_mix/web017.jpg
+		2 cars found
+	Scanning samples/img_20200301_mix/web018.png
+		2 cars found
+	Scanning samples/img_20200301_mix/web019.jpg
+		2 cars found
+	Scanning samples/img_20200301_mix/web020.jpeg
+		1 cars found
+	Scanning samples/img_20200301_mix/web021.jpg
+		3 cars found
+	Scanning samples/img_20200301_mix/web022.jpg
+		5 cars found
+	Scanning samples/img_20200301_mix/web023.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/web024.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/web025.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/web026.jpg
+		4 cars found
+	Scanning samples/img_20200301_mix/web027.jpg
+		2 cars found
+	Scanning samples/img_20200301_mix/web028.jpg
+		3 cars found
+	Scanning samples/img_20200301_mix/web029.jpg
+		1 cars found
+	Scanning samples/img_20200301_mix/web030.jpg
+		3 cars found
+	Scanning samples/img_20200301_mix/web031.png
+		5 cars found
+libpng warning: iCCP: extra compressed data
+Using TensorFlow backend.
+2020-03-06 20:39:11.051177: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1
+Searching for license plates using WPOD-NET
+	 Processing /tmp/output_img_20200301_mix_tmp/web015_0car.png
+		Bound dim: 402, ratio: 1.393855
+	 Processing /tmp/output_img_20200301_mix_tmp/20200114_221734_0car.png
+		Bound dim: 474, ratio: 1.629630
+	 Processing /tmp/output_img_20200301_mix_tmp/20200121_173900_1car.png
+		Bound dim: 352, ratio: 1.225000
+	 Processing /tmp/output_img_20200301_mix_tmp/web015_1car.png
+		Bound dim: 388, ratio: 1.315789
+	 Processing /tmp/output_img_20200301_mix_tmp/20200114_221658_0car.png
+		Bound dim: 436, ratio: 1.479422
+	 Processing /tmp/output_img_20200301_mix_tmp/20200121_173700_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/web028_2car.png
+		Bound dim: 318, ratio: 1.052632
+	 Processing /tmp/output_img_20200301_mix_tmp/web014_0car.png
+		Bound dim: 452, ratio: 1.563636
+	 Processing /tmp/output_img_20200301_mix_tmp/web022_2car.png
+		Bound dim: 318, ratio: 1.054795
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_151425_0car.png
+		Bound dim: 340, ratio: 1.147493
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_143235_0car.png
+		Bound dim: 608, ratio: 2.087591
+	 Processing /tmp/output_img_20200301_mix_tmp/20200114_222934_0car.png
+		Bound dim: 466, ratio: 1.616000
+	 Processing /tmp/output_img_20200301_mix_tmp/20200114_222257_0car.png
+		Bound dim: 426, ratio: 1.464286
+	 Processing /tmp/output_img_20200301_mix_tmp/web026_2car.png
+		Bound dim: 426, ratio: 1.436782
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_150722_1car.png
+		Bound dim: 342, ratio: 1.150235
+	 Processing /tmp/output_img_20200301_mix_tmp/20200114_222327_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/20200305_164618_0car.png
+		Bound dim: 424, ratio: 1.432099
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_151431_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/web031_2car.png
+		Bound dim: 482, ratio: 1.644737
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_150249_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/web022_1car.png
+		Bound dim: 498, ratio: 1.728814
+	 Processing /tmp/output_img_20200301_mix_tmp/web031_1car.png
+		Bound dim: 498, ratio: 1.698529
+	 Processing /tmp/output_img_20200301_mix_tmp/20200114_222303_0car.png
+		Bound dim: 520, ratio: 1.764626
+	 Processing /tmp/output_img_20200301_mix_tmp/web002_2car.png
+		Bound dim: 484, ratio: 1.676471
+	 Processing /tmp/output_img_20200301_mix_tmp/web004_1car.png
+		Bound dim: 608, ratio: 2.779661
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_142507_0car.png
+		Bound dim: 608, ratio: 2.657944
+	 Processing /tmp/output_img_20200301_mix_tmp/web022_4car.png
+		Bound dim: 308, ratio: 1.036364
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_142401_0car.png
+		Bound dim: 608, ratio: 2.419411
+	 Processing /tmp/output_img_20200301_mix_tmp/web005_0car.png
+		Bound dim: 448, ratio: 1.556122
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_150719_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/20200121_171938_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/20200121_172214_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/web030_1car.png
+		Bound dim: 372, ratio: 1.285714
+	 Processing /tmp/output_img_20200301_mix_tmp/web003_1car.png
+		Bound dim: 364, ratio: 1.244318
+	 Processing /tmp/output_img_20200301_mix_tmp/20200121_172250_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/web001_2car.png
+		Bound dim: 608, ratio: 2.131579
+	 Processing /tmp/output_img_20200301_mix_tmp/web006_0car.png
+		Bound dim: 364, ratio: 1.246000
+	 Processing /tmp/output_img_20200301_mix_tmp/web021_2car.png
+		Bound dim: 460, ratio: 1.578571
+	 Processing /tmp/output_img_20200301_mix_tmp/20191106_140004_0car.png
+		Bound dim: 576, ratio: 2.000000
+	 Processing /tmp/output_img_20200301_mix_tmp/20200121_171826_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_150722_0car.png
+		Bound dim: 360, ratio: 1.236593
+	 Processing /tmp/output_img_20200301_mix_tmp/20191106_141833_HDR_1car.png
+		Bound dim: 374, ratio: 1.289888
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_143347_0car.png
+		Bound dim: 608, ratio: 2.545126
+	 Processing /tmp/output_img_20200301_mix_tmp/web030_0car.png
+		Bound dim: 530, ratio: 1.840000
+	 Processing /tmp/output_img_20200301_mix_tmp/web004_0car.png
+		Bound dim: 420, ratio: 1.424060
+	 Processing /tmp/output_img_20200301_mix_tmp/web024_0car.png
+		Bound dim: 422, ratio: 1.429268
+	 Processing /tmp/output_img_20200301_mix_tmp/20200121_172303_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/20200114_220927_0car.png
+		Bound dim: 384, ratio: 1.307002
+	 Processing /tmp/output_img_20200301_mix_tmp/20200114_222539_0car.png
+		Bound dim: 458, ratio: 1.573948
+	 Processing /tmp/output_img_20200301_mix_tmp/web026_1car.png
+		Bound dim: 470, ratio: 1.622378
+	 Processing /tmp/output_img_20200301_mix_tmp/20200114_222451_0car.png
+		Bound dim: 448, ratio: 1.531073
+	 Processing /tmp/output_img_20200301_mix_tmp/web026_3car.png
+		Bound dim: 608, ratio: 2.352941
+	 Processing /tmp/output_img_20200301_mix_tmp/web031_4car.png
+		Bound dim: 608, ratio: 2.214953
+	 Processing /tmp/output_img_20200301_mix_tmp/web010_0car.png
+		Bound dim: 596, ratio: 2.035276
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_151355_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/web028_1car.png
+		Bound dim: 608, ratio: 2.395973
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_143444_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/web016_0car.png
+		Bound dim: 372, ratio: 1.285714
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_144732_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/web012_0car.png
+		Bound dim: 380, ratio: 1.300885
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_143942_1car.png
+		Bound dim: 552, ratio: 1.905738
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_144939_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_143141_0car.png
+		Bound dim: 608, ratio: 2.087977
+	 Processing /tmp/output_img_20200301_mix_tmp/web019_0car.png
+		Bound dim: 404, ratio: 1.368590
+	 Processing /tmp/output_img_20200301_mix_tmp/web022_0car.png
+		Bound dim: 390, ratio: 1.346386
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_144946_0car.png
+		Bound dim: 436, ratio: 1.481836
+	 Processing /tmp/output_img_20200301_mix_tmp/web022_3car.png
+		Bound dim: 594, ratio: 2.033333
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_144317_0car.png
+		Bound dim: 608, ratio: 2.287375
+	 Processing /tmp/output_img_20200301_mix_tmp/web002_0car.png
+		Bound dim: 324, ratio: 1.121019
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_143942_0car.png
+		Bound dim: 452, ratio: 1.534749
+	 Processing /tmp/output_img_20200301_mix_tmp/web028_0car.png
+		Bound dim: 304, ratio: 1.029752
+	 Processing /tmp/output_img_20200301_mix_tmp/web003_0car.png
+		Bound dim: 456, ratio: 1.543210
+	 Processing /tmp/output_img_20200301_mix_tmp/20200114_221704_0car.png
+		Bound dim: 422, ratio: 1.428062
+	 Processing /tmp/output_img_20200301_mix_tmp/web007_0car.png
+		Bound dim: 484, ratio: 1.648889
+	 Processing /tmp/output_img_20200301_mix_tmp/web023_0car.png
+		Bound dim: 538, ratio: 1.852018
+	 Processing /tmp/output_img_20200301_mix_tmp/web013_0car.png
+		Bound dim: 396, ratio: 1.356725
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_150605_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/20200121_172426_0car.png
+		Bound dim: 608, ratio: 3.332784
+	 Processing /tmp/output_img_20200301_mix_tmp/20200114_221628_0car.png
+		Bound dim: 380, ratio: 1.301573
+	 Processing /tmp/output_img_20200301_mix_tmp/web031_0car.png
+		Bound dim: 518, ratio: 1.789116
+	 Processing /tmp/output_img_20200301_mix_tmp/20191106_141833_HDR_0car.png
+		Bound dim: 324, ratio: 1.121186
+	 Processing /tmp/output_img_20200301_mix_tmp/web018_1car.png
+		Bound dim: 506, ratio: 1.741573
+	 Processing /tmp/output_img_20200301_mix_tmp/web030_2car.png
+		Bound dim: 312, ratio: 1.042969
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_144225_0car.png
+		Bound dim: 448, ratio: 1.529981
+	 Processing /tmp/output_img_20200301_mix_tmp/20200121_171722_0car.png
+		Bound dim: 384, ratio: 1.333333
+	 Processing /tmp/output_img_20200301_mix_tmp/web003_3car.png
+		Bound dim: 394, ratio: 1.326087
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_144225_1car.png
+		Bound dim: 514, ratio: 1.784314
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_144532_0car.png
+		Bound dim: 608, ratio: 2.204687
+	 Processing /tmp/output_img_20200301_mix_tmp/web008_0car.png
+		Bound dim: 474, ratio: 1.631103
+	 Processing /tmp/output_img_20200301_mix_tmp/web025_0car.png
+		Bound dim: 534, ratio: 1.844749
+	 Processing /tmp/output_img_20200301_mix_tmp/web002_1car.png
+		Bound dim: 608, ratio: 2.922078
+	 Processing /tmp/output_img_20200301_mix_tmp/web027_0car.png
+		Bound dim: 320, ratio: 1.113712
+	 Processing /tmp/output_img_20200301_mix_tmp/web020_0car.png
+		Bound dim: 464, ratio: 1.584071
+	 Processing /tmp/output_img_20200301_mix_tmp/web014_1car.png
+		Bound dim: 324, ratio: 1.119565
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_143347_1car.png
+		Bound dim: 572, ratio: 1.968641
+	 Processing /tmp/output_img_20200301_mix_tmp/web017_0car.png
+		Bound dim: 370, ratio: 1.255000
+	 Processing /tmp/output_img_20200301_mix_tmp/20200116_145131_0car.png
+		Bound dim: 562, ratio: 1.922388
+	 Processing /tmp/output_img_20200301_mix_tmp/web017_1car.png
+		Bound dim: 432, ratio: 1.500000
+	 Processing /tmp/output_img_20200301_mix_tmp/web013_1car.png
+		Bound dim: 608, ratio: 2.228571
+	 Processing /tmp/output_img_20200301_mix_tmp/web016_1car.png
+		Bound dim: 532, ratio: 1.841026
+	 Processing /tmp/output_img_20200301_mix_tmp/web031_3car.png
+		Bound dim: 608, ratio: 2.350000
+	 Processing /tmp/output_img_20200301_mix_tmp/20200121_173900_0car.png
+		Bound dim: 368, ratio: 1.279621
+	 Processing /tmp/output_img_20200301_mix_tmp/web026_0car.png
+		Bound dim: 400, ratio: 1.390476
+	 Processing /tmp/output_img_20200301_mix_tmp/web001_0car.png
+		Bound dim: 348, ratio: 1.187879
+	 Processing /tmp/output_img_20200301_mix_tmp/web021_1car.png
+		Bound dim: 522, ratio: 1.798246
+	 Processing /tmp/output_img_20200301_mix_tmp/web027_1car.png
+		Bound dim: 288, ratio: 1.000000
+	 Processing /tmp/output_img_20200301_mix_tmp/web021_0car.png
+		Bound dim: 390, ratio: 1.344371
+	 Processing /tmp/output_img_20200301_mix_tmp/20190615_010315_0car.png
+		Bound dim: 576, ratio: 2.000000
+	 Processing /tmp/output_img_20200301_mix_tmp/web018_0car.png
+		Bound dim: 406, ratio: 1.401235
+	 Processing /tmp/output_img_20200301_mix_tmp/web009_0car.png
+		Bound dim: 360, ratio: 1.211401
+	 Processing /tmp/output_img_20200301_mix_tmp/web011_0car.png
+		Bound dim: 596, ratio: 2.037594
+	 Processing /tmp/output_img_20200301_mix_tmp/web001_1car.png
+		Bound dim: 448, ratio: 1.558140
+	 Processing /tmp/output_img_20200301_mix_tmp/web019_1car.png
+		Bound dim: 336, ratio: 1.142012
+	 Processing /tmp/output_img_20200301_mix_tmp/web029_0car.png
+		Bound dim: 518, ratio: 1.790036
+	 Processing /tmp/output_img_20200301_mix_tmp/web004_2car.png
+		Bound dim: 608, ratio: 2.343284
+	 Processing /tmp/output_img_20200301_mix_tmp/web005_1car.png
+		Bound dim: 388, ratio: 1.341463
+	 Processing /tmp/output_img_20200301_mix_tmp/web003_2car.png
+		Bound dim: 608, ratio: 3.916667
+layer     filters    size              input                output
+    0 conv     32  3 x 3 / 1   240 x  80 x   3   ->   240 x  80 x  32  0.033 BFLOPs
+    1 max          2 x 2 / 2   240 x  80 x  32   ->   120 x  40 x  32
+    2 conv     64  3 x 3 / 1   120 x  40 x  32   ->   120 x  40 x  64  0.177 BFLOPs
+    3 max          2 x 2 / 2   120 x  40 x  64   ->    60 x  20 x  64
+    4 conv    128  3 x 3 / 1    60 x  20 x  64   ->    60 x  20 x 128  0.177 BFLOPs
+    5 conv     64  1 x 1 / 1    60 x  20 x 128   ->    60 x  20 x  64  0.020 BFLOPs
+    6 conv    128  3 x 3 / 1    60 x  20 x  64   ->    60 x  20 x 128  0.177 BFLOPs
+    7 max          2 x 2 / 2    60 x  20 x 128   ->    30 x  10 x 128
+    8 conv    256  3 x 3 / 1    30 x  10 x 128   ->    30 x  10 x 256  0.177 BFLOPs
+    9 conv    128  1 x 1 / 1    30 x  10 x 256   ->    30 x  10 x 128  0.020 BFLOPs
+   10 conv    256  3 x 3 / 1    30 x  10 x 128   ->    30 x  10 x 256  0.177 BFLOPs
+   11 conv    512  3 x 3 / 1    30 x  10 x 256   ->    30 x  10 x 512  0.708 BFLOPs
+   12 conv    256  3 x 3 / 1    30 x  10 x 512   ->    30 x  10 x 256  0.708 BFLOPs
+   13 conv    512  3 x 3 / 1    30 x  10 x 256   ->    30 x  10 x 512  0.708 BFLOPs
+   14 conv     80  1 x 1 / 1    30 x  10 x 512   ->    30 x  10 x  80  0.025 BFLOPs
+   15 detection
+mask_scale: Using default '1.000000'
+Loading weights from data/ocr/ocr-net.weights...Done!
+Performing OCR...
+	Scanning /tmp/output_img_20200301_mix_tmp/20191106_140004_0car_lp.png
+		LP: TY3
+	Scanning /tmp/output_img_20200301_mix_tmp/20191106_141833_HDR_1car_lp.png
+		LP: UV8208
+	Scanning /tmp/output_img_20200301_mix_tmp/20200114_221628_0car_lp.png
+		LP: 55I
+	Scanning /tmp/output_img_20200301_mix_tmp/20200114_221658_0car_lp.png
+		LP: 5J593I
+	Scanning /tmp/output_img_20200301_mix_tmp/20200114_221704_0car_lp.png
+		LP: 5J593I
+	Scanning /tmp/output_img_20200301_mix_tmp/20200114_221734_0car_lp.png
+		LP: SJ593I
+	Scanning /tmp/output_img_20200301_mix_tmp/20200114_222257_0car_lp.png
+		LP: 595I
+	Scanning /tmp/output_img_20200301_mix_tmp/20200114_222451_0car_lp.png
+		LP: J593I
+	Scanning /tmp/output_img_20200301_mix_tmp/20200114_222539_0car_lp.png
+		LP: J593I
+	Scanning /tmp/output_img_20200301_mix_tmp/20200114_222934_0car_lp.png
+		LP: HY9340
+	Scanning /tmp/output_img_20200301_mix_tmp/20200116_142401_0car_lp.png
+		LP: 4
+	Scanning /tmp/output_img_20200301_mix_tmp/20200116_142507_0car_lp.png
+No characters found
+	Scanning /tmp/output_img_20200301_mix_tmp/20200116_143347_0car_lp.png
+		LP: 591457
+	Scanning /tmp/output_img_20200301_mix_tmp/20200116_143347_1car_lp.png
+		LP: HE907K
+	Scanning /tmp/output_img_20200301_mix_tmp/20200116_143444_0car_lp.png
+		LP: SS1457
+	Scanning /tmp/output_img_20200301_mix_tmp/20200116_143942_0car_lp.png
+		LP: 394
+	Scanning /tmp/output_img_20200301_mix_tmp/20200116_144225_0car_lp.png
+		LP: 938
+	Scanning /tmp/output_img_20200301_mix_tmp/20200116_150719_0car_lp.png
+		LP: 999
+	Scanning /tmp/output_img_20200301_mix_tmp/20200116_150722_0car_lp.png
+		LP: GR9390
+	Scanning /tmp/output_img_20200301_mix_tmp/20200116_151425_0car_lp.png
+		LP: 66
+	Scanning /tmp/output_img_20200301_mix_tmp/20200116_151431_0car_lp.png
+		LP: 648
+	Scanning /tmp/output_img_20200301_mix_tmp/20200121_171722_0car_lp.png
+		LP: MW9481
+	Scanning /tmp/output_img_20200301_mix_tmp/20200121_171938_0car_lp.png
+		LP: LK2370
+	Scanning /tmp/output_img_20200301_mix_tmp/20200121_172214_0car_lp.png
+		LP: 5L319
+	Scanning /tmp/output_img_20200301_mix_tmp/20200121_172250_0car_lp.png
+		LP: TX7132
+	Scanning /tmp/output_img_20200301_mix_tmp/20200121_172303_0car_lp.png
+		LP: TX7132
+	Scanning /tmp/output_img_20200301_mix_tmp/20200121_173700_0car_lp.png
+No characters found
+	Scanning /tmp/output_img_20200301_mix_tmp/20200121_173900_0car_lp.png
+		LP: 2370
+	Scanning /tmp/output_img_20200301_mix_tmp/20200121_173900_1car_lp.png
+No characters found
+	Scanning /tmp/output_img_20200301_mix_tmp/web001_0car_lp.png
+		LP: HAPPY3
+	Scanning /tmp/output_img_20200301_mix_tmp/web002_0car_lp.png
+		LP: FA919899959
+	Scanning /tmp/output_img_20200301_mix_tmp/web003_1car_lp.png
+		LP: NQPZU8572888D
+	Scanning /tmp/output_img_20200301_mix_tmp/web004_0car_lp.png
+		LP: AM7993
+	Scanning /tmp/output_img_20200301_mix_tmp/web005_0car_lp.png
+		LP: 3K1X6
+	Scanning /tmp/output_img_20200301_mix_tmp/web005_1car_lp.png
+		LP: 45
+	Scanning /tmp/output_img_20200301_mix_tmp/web006_0car_lp.png
+No characters found
+	Scanning /tmp/output_img_20200301_mix_tmp/web008_0car_lp.png
+		LP: ZKK1LU
+	Scanning /tmp/output_img_20200301_mix_tmp/web009_0car_lp.png
+		LP: ZG7752
+	Scanning /tmp/output_img_20200301_mix_tmp/web010_0car_lp.png
+		LP: PCLAURS
+	Scanning /tmp/output_img_20200301_mix_tmp/web012_0car_lp.png
+		LP: CC0L
+	Scanning /tmp/output_img_20200301_mix_tmp/web014_0car_lp.png
+		LP: EF7363
+	Scanning /tmp/output_img_20200301_mix_tmp/web014_1car_lp.png
+No characters found
+	Scanning /tmp/output_img_20200301_mix_tmp/web015_0car_lp.png
+		LP: JUMB0TAXI
+	Scanning /tmp/output_img_20200301_mix_tmp/web015_1car_lp.png
+		LP: JUWB0TAX
+	Scanning /tmp/output_img_20200301_mix_tmp/web016_0car_lp.png
+		LP: UN408
+	Scanning /tmp/output_img_20200301_mix_tmp/web016_1car_lp.png
+		LP: VL93I
+	Scanning /tmp/output_img_20200301_mix_tmp/web017_0car_lp.png
+		LP: TE2I81
+	Scanning /tmp/output_img_20200301_mix_tmp/web018_0car_lp.png
+		LP: HTK
+	Scanning /tmp/output_img_20200301_mix_tmp/web019_0car_lp.png
+		LP: VD976N666
+	Scanning /tmp/output_img_20200301_mix_tmp/web020_0car_lp.png
+		LP: BZ686S9I8
+	Scanning /tmp/output_img_20200301_mix_tmp/web021_0car_lp.png
+		LP: 85
+	Scanning /tmp/output_img_20200301_mix_tmp/web021_1car_lp.png
+		LP: 3331
+	Scanning /tmp/output_img_20200301_mix_tmp/web022_0car_lp.png
+		LP: 7JNC598
+	Scanning /tmp/output_img_20200301_mix_tmp/web023_0car_lp.png
+		LP: VF4794
+	Scanning /tmp/output_img_20200301_mix_tmp/web024_0car_lp.png
+		LP: CKZS635J6I0
+	Scanning /tmp/output_img_20200301_mix_tmp/web025_0car_lp.png
+		LP: SZ2506
+	Scanning /tmp/output_img_20200301_mix_tmp/web026_0car_lp.png
+		LP: L759Z6
+	Scanning /tmp/output_img_20200301_mix_tmp/web026_1car_lp.png
+		LP: 4S52
+	Scanning /tmp/output_img_20200301_mix_tmp/web026_2car_lp.png
+		LP: 3
+	Scanning /tmp/output_img_20200301_mix_tmp/web027_0car_lp.png
+		LP: A50ID
+	Scanning /tmp/output_img_20200301_mix_tmp/web028_0car_lp.png
+		LP: SZ05
+	Scanning /tmp/output_img_20200301_mix_tmp/web029_0car_lp.png
+		LP: 65F5N8
+	Scanning /tmp/output_img_20200301_mix_tmp/web030_0car_lp.png
+		LP: TE62
+	Scanning /tmp/output_img_20200301_mix_tmp/web030_1car_lp.png
+		LP: 63945
+	Scanning /tmp/output_img_20200301_mix_tmp/web030_2car_lp.png
+		LP: J5
+	Scanning /tmp/output_img_20200301_mix_tmp/web031_0car_lp.png
+		LP: 1
+	Scanning /tmp/output_img_20200301_mix_tmp/web031_1car_lp.png
+		LP: RV7202
+	Scanning /tmp/output_img_20200301_mix_tmp/web031_2car_lp.png
+		LP: UL890
+	Scanning /tmp/output_img_20200301_mix_tmp/web031_3car_lp.png
+No characters found
+	Scanning /tmp/output_img_20200301_mix_tmp/web031_4car_lp.png
+		LP: TF260
+
+
+/tmp/output_img_20200301_mix_tmp/web023_0car_lp.txt
+88.1564541518
+23.3149322353
+3.78111560704
+
+
+/tmp/output_img_20200301_mix_tmp/20200116_142401_0car_lp.txt
+159.674477987
+43.2245724749
+3.69406725952
+
+
+/tmp/output_img_20200301_mix_tmp/20200121_171938_0car_lp.txt
+581.709148931
+156.232819614
+3.72334795192
+
+
+/tmp/output_img_20200301_mix_tmp/20200116_150719_0car_lp.txt
+179.407972469
+65.713413284
+2.73015756607
+
+
+/tmp/output_img_20200301_mix_tmp/20200121_172214_0car_lp.txt
+457.945523842
+153.686993894
+2.97972855241
+
+
+/tmp/output_img_20200301_mix_tmp/web022_0car_lp.txt
+127.190543441
+62.1217963183
+2.04743827415
+
+
+/tmp/output_img_20200301_mix_tmp/20200116_142507_0car_lp.txt
+145.468134162
+30.5150289301
+4.76709802554
+
+
+/tmp/output_img_20200301_mix_tmp/web021_0car_lp.txt
+35.6343994813
+25.3859793613
+1.4037039491
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/web021_1car_lp.txt
+48.7348533648
+22.6572741706
+2.15095836321
+
+
+/tmp/output_img_20200301_mix_tmp/web028_0car_lp.txt
+123.533217819
+84.0362025044
+1.47000000164
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/web026_0car_lp.txt
+68.7111791305
+38.4460446595
+1.78721061527
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/web026_1car_lp.txt
+31.588547156
+20.7738961689
+1.52058847792
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/web026_2car_lp.txt
+21.4077732684
+14.3399781877
+1.49287348894
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/20200116_143444_0car_lp.txt
+185.230140193
+59.9883387188
+3.08776912561
+
+
+/tmp/output_img_20200301_mix_tmp/20200121_172250_0car_lp.txt
+711.233368362
+174.852227878
+4.0676254286
+
+
+/tmp/output_img_20200301_mix_tmp/20200114_222451_0car_lp.txt
+343.729734099
+104.057508188
+3.30326701154
+
+
+/tmp/output_img_20200301_mix_tmp/web029_0car_lp.txt
+41.752936552
+35.8863338122
+1.16347734964
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/web015_0car_lp.txt
+120.056546841
+29.8879634127
+4.01688616863
+
+
+/tmp/output_img_20200301_mix_tmp/web015_1car_lp.txt
+47.184427362
+14.3362023929
+3.29127798763
+
+
+/tmp/output_img_20200301_mix_tmp/20200121_171722_0car_lp.txt
+259.640828676
+88.6454279385
+2.92898161489
+
+
+/tmp/output_img_20200301_mix_tmp/20191106_140004_0car_lp.txt
+762.86936754
+153.774731497
+4.96095398843
+
+
+/tmp/output_img_20200301_mix_tmp/20200116_144225_0car_lp.txt
+156.396439837
+66.767519695
+2.34240302098
+
+
+/tmp/output_img_20200301_mix_tmp/20200114_222257_0car_lp.txt
+419.559771091
+104.393726245
+4.01901327009
+
+
+/tmp/output_img_20200301_mix_tmp/web025_0car_lp.txt
+49.4732915744
+15.7263452233
+3.14588614659
+
+
+/tmp/output_img_20200301_mix_tmp/20200114_222539_0car_lp.txt
+382.040575243
+86.3196112905
+4.42588386963
+
+
+/tmp/output_img_20200301_mix_tmp/web024_0car_lp.txt
+79.0635865868
+40.0933260309
+1.97198871767
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/20200121_172303_0car_lp.txt
+713.08110966
+181.222965817
+3.93482750072
+
+
+/tmp/output_img_20200301_mix_tmp/20200114_221734_0car_lp.txt
+253.095266624
+61.4108760833
+4.12134271265
+
+
+/tmp/output_img_20200301_mix_tmp/20200116_143942_0car_lp.txt
+162.477065364
+70.9595438437
+2.28971406188
+
+
+/tmp/output_img_20200301_mix_tmp/20200116_151425_0car_lp.txt
+340.798732942
+173.329712227
+1.96618761182
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/20200121_173900_0car_lp.txt
+38.3980059854
+22.4863851987
+1.7076113233
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/20200121_173900_1car_lp.txt
+121.487296558
+78.6316888832
+1.54501700629
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/web027_0car_lp.txt
+251.890169817
+46.685664659
+5.39545000927
+
+
+/tmp/output_img_20200301_mix_tmp/20200114_221628_0car_lp.txt
+581.671208446
+188.896660598
+3.07930911328
+
+
+/tmp/output_img_20200301_mix_tmp/web017_0car_lp.txt
+46.1639357452
+13.2917776232
+3.47311977779
+
+
+/tmp/output_img_20200301_mix_tmp/20200114_221658_0car_lp.txt
+519.936323797
+119.88357787
+4.33701039823
+
+
+/tmp/output_img_20200301_mix_tmp/20200114_222934_0car_lp.txt
+119.707073753
+32.0364681402
+3.73658772961
+
+
+/tmp/output_img_20200301_mix_tmp/web006_0car_lp.txt
+232.720255391
+103.588739274
+2.24657870173
+
+
+/tmp/output_img_20200301_mix_tmp/20200121_173700_0car_lp.txt
+137.998011938
+61.7641600788
+2.23427327048
+
+
+/tmp/output_img_20200301_mix_tmp/web016_0car_lp.txt
+145.949764489
+52.5675226263
+2.77642462869
+
+
+/tmp/output_img_20200301_mix_tmp/web016_1car_lp.txt
+67.5240080341
+27.2428394759
+2.47859655356
+
+
+/tmp/output_img_20200301_mix_tmp/web030_0car_lp.txt
+59.035757123
+16.0693139315
+3.67381939109
+
+
+/tmp/output_img_20200301_mix_tmp/web030_1car_lp.txt
+86.5938460385
+19.9880030292
+4.33229102038
+
+
+/tmp/output_img_20200301_mix_tmp/web030_2car_lp.txt
+61.7190824675
+18.1897851429
+3.39306275378
+
+
+/tmp/output_img_20200301_mix_tmp/web019_0car_lp.txt
+77.4852030553
+43.1733427005
+1.79474643863
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/web010_0car_lp.txt
+141.14434548
+93.0901265886
+1.51621176867
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/20200116_151431_0car_lp.txt
+131.713404463
+79.1105825942
+1.66492775231
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/20191106_141833_HDR_1car_lp.txt
+333.909840984
+91.9822498042
+3.63015518423
+
+
+/tmp/output_img_20200301_mix_tmp/20200114_221704_0car_lp.txt
+486.717993385
+95.502045034
+5.09641435649
+
+
+/tmp/output_img_20200301_mix_tmp/web009_0car_lp.txt
+65.9706456986
+23.3156145362
+2.82946201552
+
+
+/tmp/output_img_20200301_mix_tmp/20200116_150722_0car_lp.txt
+118.682910953
+34.1157679238
+3.47882865244
+
+
+/tmp/output_img_20200301_mix_tmp/web008_0car_lp.txt
+65.4829438463
+54.412886895
+1.20344549946
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/20200116_143347_0car_lp.txt
+77.8773979557
+24.472129885
+3.18228933573
+
+
+/tmp/output_img_20200301_mix_tmp/20200116_143347_1car_lp.txt
+91.9444890544
+23.998502025
+3.83125950772
+
+
+/tmp/output_img_20200301_mix_tmp/web014_0car_lp.txt
+55.7295297056
+19.3194073592
+2.88463971328
+
+
+/tmp/output_img_20200301_mix_tmp/web014_1car_lp.txt
+26.6591461731
+16.1988924294
+1.64573882377
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/web020_0car_lp.txt
+40.0561161349
+22.2447571851
+1.80069918505
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/web012_0car_lp.txt
+43.8185502982
+15.4508736155
+2.83599176258
+
+
+/tmp/output_img_20200301_mix_tmp/web004_0car_lp.txt
+218.859313246
+65.8520996303
+3.32349787592
+
+
+/tmp/output_img_20200301_mix_tmp/web005_0car_lp.txt
+62.7591337172
+51.6588149054
+1.21487753507
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/web005_1car_lp.txt
+24.9701497327
+11.9876235435
+2.0829941516
+
+
+/tmp/output_img_20200301_mix_tmp/web001_0car_lp.txt
+59.8507627871
+16.2326304552
+3.68706494934
+
+
+/tmp/output_img_20200301_mix_tmp/web003_1car_lp.txt
+59.8552294238
+30.6256737447
+1.95441347423
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/web018_0car_lp.txt
+32.362901831
+25.3881613074
+1.27472412985
+Two Lined!
+libpng warning: iCCP: extra compressed data
+
+
+/tmp/output_img_20200301_mix_tmp/web031_0car_lp.txt
+36.9128465638
+21.4316307942
+1.7223536052
+Two Lined!
+
+
+/tmp/output_img_20200301_mix_tmp/web031_1car_lp.txt
+51.7598945196
+13.7418907906
+3.76657734428
+
+
+/tmp/output_img_20200301_mix_tmp/web031_2car_lp.txt
+56.5675058078
+15.0986487564
+3.74652770062
+
+
+/tmp/output_img_20200301_mix_tmp/web031_3car_lp.txt
+21.6970292361
+10.5353732446
+2.05944571041
+
+
+/tmp/output_img_20200301_mix_tmp/web031_4car_lp.txt
+37.004486238
+12.020547668
+3.07843596315
+
+
+/tmp/output_img_20200301_mix_tmp/web002_0car_lp.txt
+155.06704561
+75.5410763344
+2.0527513392
+user@ubuntuvm:~/alpr-unconstrained$

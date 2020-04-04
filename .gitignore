@@ -3,6 +3,11 @@
 *.so
 *.csv
 .vscode/
-data/
 _output/
 _sample/
+
+data/*/*.data
+data/*/*.weights
+data/*/*.names
+data/*/*.h5
+data/*/*.json

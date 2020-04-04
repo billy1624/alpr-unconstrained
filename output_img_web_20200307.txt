@@ -1,0 +1,1039 @@
+	Scanning samples/img_web_20200307/web096.png
+		1 cars found
+	Scanning samples/img_web_20200307/web097.png
+		1 cars found
+	Scanning samples/img_web_20200307/web098.png
+		1 cars found
+	Scanning samples/img_web_20200307/web099.png
+		1 cars found
+	Scanning samples/img_web_20200307/web100.png
+		1 cars found
+	Scanning samples/img_web_20200307/web101.png
+		1 cars found
+	Scanning samples/img_web_20200307/web104.png
+		1 cars found
+	Scanning samples/img_web_20200307/web105.png
+		2 cars found
+	Scanning samples/img_web_20200307/web106.png
+		1 cars found
+	Scanning samples/img_web_20200307/web107.png
+		1 cars found
+	Scanning samples/img_web_20200307/web108.png
+		1 cars found
+	Scanning samples/img_web_20200307/web109.png
+		2 cars found
+	Scanning samples/img_web_20200307/web110.png
+		2 cars found
+Using TensorFlow backend.
+2020-03-07 15:05:07.709193: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1
+Searching for license plates using WPOD-NET
+	 Processing /tmp/output_img_web_20200307_tmp/web057_0car.png
+		Bound dim: 328, ratio: 1.125413
+(417, 354)
+[[264.49084901 297.39889671 294.5611194  261.65307171]
+ [277.09491133 271.01210426 289.55289988 295.63570695]]
+33.4655067914
+18.7567076611
+1.78418874976
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web054_1car.png
+		Bound dim: 608, ratio: 2.705882
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web055_0car.png
+		Bound dim: 376, ratio: 1.293478
+(462, 421)
+[[229.31646768 285.35711968 281.27242674 225.23177473]
+ [208.30625276 208.05015865 239.59638891 239.85248303]]
+56.0412371545
+31.8095796977
+1.76177232416
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web051_0car.png
+		Bound dim: 322, ratio: 1.116438
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web083_2car.png
+		Bound dim: 348, ratio: 1.160194
+(1440, 632)
+[[1178.75614298 1236.58941101 1236.89205968 1179.05879165]
+ [ 496.92410176  498.11098338  522.10863347  520.92175185]]
+57.845445621
+23.9995584517
+2.41027124468
+	 Processing /tmp/output_img_web_20200307_tmp/web101_0car.png
+		Bound dim: 536, ratio: 1.821053
+(416, 267)
+[[299.7390475  344.72726415 343.68285857 298.69464192]
+ [162.61800666 154.58956109 173.25146243 181.279908  ]]
+45.6989669026
+18.6911033569
+2.44495822584
+	 Processing /tmp/output_img_web_20200307_tmp/web090_0car.png
+		Bound dim: 460, ratio: 1.577889
+(474, 350)
+[[287.55204395 326.96973917 326.04873456 286.63103934]
+ [216.75608475 211.64964427 240.52621946 245.63265993]]
+39.7470807831
+28.8912589548
+1.37574762129
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web039_0car.png
+		Bound dim: 416, ratio: 1.444444
+(501, 293)
+[[340.92574802 372.76376882 378.57810525 346.74008445]
+ [116.49331497 107.05490534 134.25613108 143.69454072]]
+33.2075766171
+27.8157004277
+1.1938429055
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web107_0car.png
+		Bound dim: 370, ratio: 1.256198
+(221, 221)
+[[134.55575434 173.6177454  170.96876341 131.90677235]
+ [144.45651919 142.14286227 155.29612422 157.60978114]]
+39.130450466
+13.4173546458
+2.91640576693
+	 Processing /tmp/output_img_web_20200307_tmp/web068_1car.png
+		Bound dim: 594, ratio: 2.060606
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web092_0car.png
+		Bound dim: 456, ratio: 1.570866
+(930, 421)
+[[616.9318944  671.13950472 669.97148878 615.76387846]
+ [233.91028631 225.81526881 244.14157015 252.23658765]]
+54.8087066498
+18.3634850247
+2.98465713759
+	 Processing /tmp/output_img_web_20200307_tmp/web109_1car.png
+		Bound dim: 340, ratio: 1.148571
+(790, 322)
+[[191.01391942 224.32411069 222.60987469 189.29968341]
+ [219.9701099  222.71036829 236.71191208 233.97165369]]
+33.4227147177
+14.1060920752
+2.36938157922
+	 Processing /tmp/output_img_web_20200307_tmp/web067_1car.png
+		Bound dim: 476, ratio: 1.604651
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web037_1car.png
+		Bound dim: 512, ratio: 1.750000
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web046_0car.png
+		Bound dim: 412, ratio: 1.383333
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web108_0car.png
+		Bound dim: 394, ratio: 1.353234
+(369, 404)
+[[239.29410379 290.89518327 289.38594041 237.78486093]
+ [190.28819855 186.45147063 202.60227466 206.43900258]]
+51.7435202275
+16.2211677999
+3.18987639274
+	 Processing /tmp/output_img_web_20200307_tmp/web093_0car.png
+		Bound dim: 506, ratio: 1.739726
+(663, 353)
+[[397.33347771 452.07103514 451.87969664 397.14213922]
+ [212.8588133  201.91759473 219.98046661 230.92168518]]
+55.8203408831
+18.0638852677
+3.09016250136
+	 Processing /tmp/output_img_web_20200307_tmp/web045_0car.png
+		Bound dim: 458, ratio: 1.574545
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web081_0car.png
+		Bound dim: 514, ratio: 1.755556
+(481, 255)
+[[229.84584483 275.11805668 275.73869317 230.46648132]
+ [138.59299973 137.69132296 161.7166857  162.61836248]]
+45.2811902129
+24.0333777217
+1.88409597424
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web068_0car.png
+		Bound dim: 500, ratio: 1.729469
+(444, 333)
+[[ 77.16331501 147.80992332 143.1954331   72.54882478]
+ [174.27562238 181.91186738 211.0028354  203.3665904 ]]
+71.0581135676
+29.4546760349
+2.41245612355
+	 Processing /tmp/output_img_web_20200307_tmp/web038_0car.png
+		Bound dim: 378, ratio: 1.268398
+(357, 273)
+[[234.50247485 267.10299452 265.85429865 233.25377898]
+ [124.53490623 119.32927691 144.68556821 149.89119753]]
+33.0135193414
+25.3870193163
+1.3004094309
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web080_0car.png
+		Bound dim: 608, ratio: 2.231959
+(565, 240)
+[[319.56624095 370.64934372 370.31608995 319.23298718]
+ [ 94.41748905  96.58494789 120.74551582 118.57805699]]
+51.1290647926
+24.1628661604
+2.11601820965
+	 Processing /tmp/output_img_web_20200307_tmp/web065_0car.png
+		Bound dim: 412, ratio: 1.411392
+(346, 201)
+[[166.30298398 205.58208123 204.91303031 165.63393306]
+ [ 84.9845126   88.66704852 113.41010565 109.72756973]]
+39.4513441002
+24.7521010292
+1.59385839827
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web056_0car.png
+		Bound dim: 518, ratio: 1.788571
+(481, 272)
+[[ 97.75003803 133.70227279 133.11395184  97.16171707]
+ [134.16842242 132.87867803 161.9481255  163.23786989]]
+35.9753613648
+29.0754002194
+1.23731267991
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web105_1car.png
+		Bound dim: 458, ratio: 1.575758
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web071_1car.png
+		Bound dim: 328, ratio: 1.128205
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web047_1car.png
+		Bound dim: 424, ratio: 1.458333
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web097_0car.png
+		Bound dim: 360, ratio: 1.239535
+(600, 623)
+[[273.65200412 336.47109352 346.44180163 283.62271223]
+ [110.43978057  75.22804832 105.09048535 140.3022176 ]]
+72.0146101845
+31.4830139202
+2.28741156634
+	 Processing /tmp/output_img_web_20200307_tmp/web043_1car.png
+		Bound dim: 468, ratio: 1.621053
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web050_0car.png
+		Bound dim: 474, ratio: 1.630137
+(454, 451)
+[[184.00459896 233.40710533 226.71326524 177.31075887]
+ [220.53353187 220.61048262 243.32643553 243.24948478]]
+49.4025663063
+23.681680929
+2.08610894026
+	 Processing /tmp/output_img_web_20200307_tmp/web084_2car.png
+		Bound dim: 318, ratio: 1.082803
+(727, 360)
+[[637.41219309 678.84360219 678.06786832 636.63645923]
+ [236.97912679 227.51767675 244.61065269 254.07210273]]
+42.4980081446
+17.1105695261
+2.4837284393
+	 Processing /tmp/output_img_web_20200307_tmp/web070_0car.png
+		Bound dim: 568, ratio: 1.961039
+(385, 275)
+[[ 67.05109699  93.68707702  93.24894744  66.6129674 ]
+ [179.70230286 182.43347879 201.88446698 199.15329105]]
+26.7756373301
+19.4559219528
+1.37622043278
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web037_2car.png
+		Bound dim: 568, ratio: 1.961538
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web087_0car.png
+		Bound dim: 512, ratio: 1.780347
+(488, 314)
+[[292.81503879 343.98873778 347.15913931 295.98544031]
+ [139.16704447 131.4275511  146.80898609 154.54847947]]
+51.7556492229
+15.7047759711
+3.29553565859
+	 Processing /tmp/output_img_web_20200307_tmp/web061_0car.png
+		Bound dim: 436, ratio: 1.481982
+(480, 293)
+[[279.52891484 317.21663849 317.96304729 280.27532365]
+ [186.41116769 181.65290247 210.7096066  215.46787182]]
+37.9869135561
+29.0662894247
+1.30690618954
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web081_1car.png
+		Bound dim: 394, ratio: 1.352459
+(481, 255)
+[[409.09117879 441.43597956 441.13761151 408.79281074]
+ [166.8010882  163.97716535 173.83986066 176.66378351]]
+32.4678406591
+9.8672074194
+3.29047918819
+	 Processing /tmp/output_img_web_20200307_tmp/web042_1car.png
+		Bound dim: 442, ratio: 1.491228
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web091_0car.png
+		Bound dim: 464, ratio: 1.584000
+(600, 332)
+[[464.23714029 504.57250607 501.93998683 461.60462105]
+ [240.22443103 231.40418666 265.98101726 274.80126163]]
+41.2884783376
+34.6768996857
+1.19066233463
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web072_0car.png
+		Bound dim: 438, ratio: 1.512953
+(510, 301)
+[[352.24533676 385.04109142 386.86982511 354.07407045]
+ [173.51284679 170.05525975 195.23103302 198.68862006]]
+32.9775140329
+25.2421042407
+1.30644869058
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web082_0car.png
+		Bound dim: 358, ratio: 1.206349
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web033_0car.png
+		Bound dim: 354, ratio: 1.226054
+(611, 468)
+[[340.56029015 386.29830964 384.37222881 338.63420933]
+ [285.27442324 289.20943789 318.00432834 314.0693137 ]]
+45.9069794963
+28.8592360154
+1.59072053992
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web073_0car.png
+		Bound dim: 368, ratio: 1.280543
+(481, 437)
+[[328.50507542 361.89798433 360.94756584 327.55465693]
+ [259.09105271 255.36396268 281.5010958  285.22818582]]
+33.6002613938
+26.154407333
+1.28468831146
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web051_2car.png
+		Bound dim: 608, ratio: 2.211268
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web105_0car.png
+		Bound dim: 328, ratio: 1.125767
+(805, 578)
+[[507.67120142 545.00729709 542.69500771 505.35891204]
+ [383.28313485 380.70824309 405.51631402 408.09120578]]
+37.4247793206
+24.9155988319
+1.50206220501
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web059_0car.png
+		Bound dim: 448, ratio: 1.528205
+(398, 271)
+[[255.21619545 287.16828975 286.2268047  254.2747104 ]
+ [165.92485065 155.96310415 186.50868256 196.47042906]]
+33.4689815131
+30.5600843348
+1.09518616331
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web098_0car.png
+		Bound dim: 388, ratio: 1.341538
+(614, 557)
+[[489.41519615 515.72273522 514.1821761  487.87463703]
+ [372.5469099  366.83167076 394.66964938 400.38488852]]
+26.9211918398
+27.8805734536
+0.965589602548
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web034_1car.png
+		Bound dim: 536, ratio: 1.849057
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web043_0car.png
+		Bound dim: 292, ratio: 1.007937
+(493, 281)
+[[ 96.06563432 145.54250385 143.88030671  94.40343717]
+ [162.70169429 166.8745859  199.96373159 195.79083998]]
+49.6525290701
+33.1308687206
+1.49867875451
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web043_2car.png
+		Bound dim: 450, ratio: 1.532258
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web058_1car.png
+		Bound dim: 348, ratio: 1.160000
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web064_0car.png
+		Bound dim: 302, ratio: 1.025316
+(325, 296)
+[[185.40845977 214.0222539  213.33571556 184.72192143]
+ [223.00169013 223.01848759 239.99078199 239.97398453]]
+28.6137990632
+16.9861741443
+1.68453465861
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web081_2car.png
+		Bound dim: 312, ratio: 1.042553
+(481, 255)
+[[409.07519831 441.10364644 440.8038522  408.77540407]
+ [166.96622568 163.08343817 173.39423903 177.27702654]]
+32.2629435774
+10.3151583131
+3.12772161105
+	 Processing /tmp/output_img_web_20200307_tmp/web047_0car.png
+		Bound dim: 360, ratio: 1.237037
+(430, 312)
+[[100.53639157 146.35744925 146.96179697 101.14073929]
+ [134.03492999 139.60581263 169.13185532 163.56097268]]
+46.1584668335
+29.5322270251
+1.5629863198
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web084_1car.png
+		Bound dim: 562, ratio: 1.947917
+(727, 360)
+[[637.72864409 679.4691148  678.43636195 636.69589123]
+ [236.5601669  227.28906054 244.79138969 254.06249605]]
+42.757692972
+17.5327722965
+2.43872972561
+	 Processing /tmp/output_img_web_20200307_tmp/web063_0car.png
+		Bound dim: 316, ratio: 1.050562
+(490, 523)
+[[277.28619693 303.13801799 300.32580946 274.4739884 ]
+ [407.29335834 409.3414038  432.92223206 430.87418661]]
+25.9328197882
+23.7479257721
+1.09200357273
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web049_0car.png
+		Bound dim: 576, ratio: 1.973684
+(495, 358)
+[[ 96.09485644 153.25447176 150.4510241   93.29140878]
+ [168.49659347 175.86601736 198.83903525 191.46961136]]
+57.6327166779
+23.1434411792
+2.49023972846
+	 Processing /tmp/output_img_web_20200307_tmp/web110_1car.png
+		Bound dim: 388, ratio: 1.315476
+(871, 314)
+[[736.42564129 782.78198928 780.96310467 734.60675668]
+ [224.03356461 219.8348031  234.64108941 238.83985092]]
+46.5461125883
+14.9175887951
+3.12021689481
+	 Processing /tmp/output_img_web_20200307_tmp/web106_0car.png
+		Bound dim: 384, ratio: 1.333333
+(283, 242)
+[[145.47668886 189.4119808  189.18221732 145.24692538]
+ [125.81258219 125.36123318 138.34034736 138.79169637]]
+43.9376102423
+12.9811477242
+3.38472461571
+	 Processing /tmp/output_img_web_20200307_tmp/web055_1car.png
+		Bound dim: 544, ratio: 1.888889
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web078_0car.png
+		Bound dim: 440, ratio: 1.516779
+(426, 249)
+[[ 65.46959334  95.28892342  96.36405817  66.54472809]
+ [158.95072577 161.6618873  181.52327613 178.81211459]]
+29.9423252819
+19.8904670848
+1.5053605908
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web089_0car.png
+		Bound dim: 460, ratio: 1.576923
+(403, 381)
+[[324.93655136 349.61259745 350.41254905 325.73650297]
+ [232.00796512 226.30965141 248.06296424 253.76127795]]
+25.325442332
+21.76801648
+1.16342443765
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web060_0car.png
+		Bound dim: 566, ratio: 1.930000
+(479, 271)
+[[337.01114689 378.02508249 377.9069534  336.8930178 ]
+ [139.6971577  133.38073101 158.86700732 165.18343401]]
+41.4974717202
+25.4865500726
+1.62821062883
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web076_0car.png
+		Bound dim: 408, ratio: 1.376147
+(406, 349)
+[[147.02112048 189.00970857 183.74540676 141.75681867]
+ [143.6935473  154.09098664 186.8098038  176.41236446]]
+43.256771431
+33.1396117929
+1.30528902093
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web109_0car.png
+		Bound dim: 460, ratio: 1.550000
+(790, 322)
+[[659.04519082 710.87342656 709.36533179 657.53709604]
+ [235.25841908 231.09621717 247.6767657  251.83896761]]
+51.9950953977
+16.6489921429
+3.12301759479
+	 Processing /tmp/output_img_web_20200307_tmp/web094_0car.png
+		Bound dim: 572, ratio: 1.939535
+(785, 303)
+[[491.04746656 537.4122927  536.60284962 490.23802348]
+ [229.52181873 218.84221146 237.68623894 248.36584621]]
+47.5788935852
+18.8614042397
+2.52255309204
+	 Processing /tmp/output_img_web_20200307_tmp/web083_0car.png
+		Bound dim: 508, ratio: 1.744395
+(1440, 632)
+[[352.7974973  425.21193062 426.04359392 353.6291606 ]
+ [450.10956164 457.2575921  479.51853162 472.37050116]]
+72.7663692394
+22.2764694767
+3.26651264535
+	 Processing /tmp/output_img_web_20200307_tmp/web075_0car.png
+		Bound dim: 500, ratio: 1.730233
+(622, 356)
+[[ 98.70770201 132.12317902 129.02776164  95.61228463]
+ [179.54195413 184.93428769 210.29810219 204.90576862]]
+33.8477675013
+25.5519998099
+1.32466216942
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web037_0car.png
+		Bound dim: 408, ratio: 1.375000
+(363, 256)
+[[186.05749768 244.28011659 244.00178239 185.77916349]
+ [173.49861842 174.98088221 189.06761136 187.58534758]]
+58.2414839976
+14.089478637
+4.13368624192
+	 Processing /tmp/output_img_web_20200307_tmp/web048_0car.png
+		Bound dim: 458, ratio: 1.546392
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web034_0car.png
+		Bound dim: 422, ratio: 1.456522
+(452, 374)
+[[124.21932372 176.61123547 175.22401735 122.83210559]
+ [182.50898258 189.89672747 211.16743762 203.77969274]]
+52.9102182156
+21.3158974626
+2.48219519297
+	 Processing /tmp/output_img_web_20200307_tmp/web079_0car.png
+		Bound dim: 432, ratio: 1.502370
+(486, 372)
+[[261.78314023 333.88079927 333.98873605 261.89107701]
+ [230.89901838 229.85533442 249.32914799 250.37283194]]
+72.1052128181
+19.4741126928
+3.70261864843
+	 Processing /tmp/output_img_web_20200307_tmp/web071_0car.png
+		Bound dim: 360, ratio: 1.239362
+(564, 509)
+[[ 77.63325756 122.5481968  126.47538993  81.56045069]
+ [189.73689507 151.05007881 205.60243129 244.28924756]]
+59.2791828527
+54.6935280219
+1.08384273234
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web052_1car.png
+		Bound dim: 336, ratio: 1.169753
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web095_0car.png
+		Bound dim: 426, ratio: 1.463415
+(1010, 457)
+[[702.25891581 725.53914998 723.03360939 699.75337521]
+ [285.27749503 280.81965661 307.2001611  311.65799952]]
+23.703198659
+26.4992217057
+0.894486597466
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web066_0car.png
+		Bound dim: 462, ratio: 1.555102
+(575, 288)
+[[423.34727499 462.90934598 460.30546276 420.74339177]
+ [205.40407673 199.13152833 228.18268273 234.45523114]]
+40.0562395149
+29.1676152588
+1.37331211892
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web044_1car.png
+		Bound dim: 466, ratio: 1.617886
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web032_0car.png
+		Bound dim: 312, ratio: 1.043046
+(1440, 739)
+[[654.75474143 697.04404387 692.68033092 650.39102847]
+ [545.33754563 549.65240752 574.91545733 570.60059544]]
+42.5088594816
+25.6371542159
+1.65809586834
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web051_1car.png
+		Bound dim: 308, ratio: 1.037500
+(522, 284)
+[[382.9572623  406.25402836 405.48629376 382.1895277 ]
+ [176.94861079 175.73044968 193.08045838 194.2986195 ]]
+23.3285924443
+17.3669864513
+1.34327233511
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web104_0car.png
+		Bound dim: 398, ratio: 1.360927
+(636, 413)
+[[362.08554365 391.9849881  391.18611598 361.28667153]
+ [298.74623431 288.80723795 316.1298249  326.06882126]]
+31.5081009768
+27.3342633769
+1.15269617997
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web085_0car.png
+		Bound dim: 476, ratio: 1.606742
+(472, 285)
+[[ 46.51333464  85.71048565  85.20010217  46.00295116]
+ [176.28952173 180.09302605 194.44326847 190.63976415]]
+39.3812556044
+14.3593157489
+2.74255795284
+	 Processing /tmp/output_img_web_20200307_tmp/web069_0car.png
+		Bound dim: 348, ratio: 1.189911
+(551, 427)
+[[133.13776756 174.64845111 172.00050116 130.4898176 ]
+ [255.48520529 262.98583185 300.46421224 292.96358569]]
+42.1828904648
+37.5718063956
+1.12272723916
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web053_0car.png
+		Bound dim: 546, ratio: 1.866071
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web083_4car.png
+		Bound dim: 474, ratio: 1.631579
+(1440, 632)
+[[200.28149692 239.65844264 238.29701201 198.92006628]
+ [416.27713046 420.36485815 433.94945585 429.86172815]]
+39.5885510252
+13.6526476536
+2.89969770185
+	 Processing /tmp/output_img_web_20200307_tmp/web110_0car.png
+		Bound dim: 416, ratio: 1.418269
+(871, 314)
+[[218.48838123 269.24841048 266.01881451 215.25878526]
+ [239.52932027 243.02016067 265.82215416 262.33131376]]
+50.8799227292
+23.0295722317
+2.20932990928
+	 Processing /tmp/output_img_web_20200307_tmp/web067_0car.png
+		Bound dim: 368, ratio: 1.251825
+(519, 309)
+[[250.62626525 292.80110938 293.32662657 251.15178243]
+ [126.78699205 129.47801894 157.09010872 154.39908183]]
+42.2606093598
+27.6170901845
+1.53023396301
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web074_0car.png
+		Bound dim: 390, ratio: 1.346491
+(717, 332)
+[[510.67104442 567.11414081 566.52118352 510.07808713]
+ [216.29640709 209.8822656  227.13546211 233.5496036 ]]
+56.8063758814
+17.2633828683
+3.29057035431
+	 Processing /tmp/output_img_web_20200307_tmp/web086_0car.png
+		Bound dim: 486, ratio: 1.677885
+(424, 352)
+[[310.68989576 342.96274471 339.56032258 307.28747362]
+ [257.86723304 250.75092253 276.1208161  283.23712661]]
+33.0481263447
+25.5970306095
+1.29109219147
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web062_0car.png
+		Bound dim: 318, ratio: 1.054321
+(460, 542)
+[[293.52382307 341.17287018 340.18906518 292.54001807]
+ [433.2903505  432.37925899 450.7136759  451.62476741]]
+47.6577567474
+18.3607928888
+2.59562629108
+	 Processing /tmp/output_img_web_20200307_tmp/web035_1car.png
+		Bound dim: 350, ratio: 1.192308
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web054_0car.png
+		Bound dim: 368, ratio: 1.251029
+(562, 324)
+[[152.97918654 224.81515031 230.63035739 158.79439362]
+ [186.76724106 192.42252369 228.55467859 222.89939596]]
+72.0582258455
+36.5971208089
+1.9689588758
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web085_1car.png
+		Bound dim: 414, ratio: 1.415205
+(472, 285)
+[[290.18799762 346.69311929 345.83447877 289.3293571 ]
+ [206.35215821 208.14010329 224.92893476 223.14098968]]
+56.5334018296
+16.8107740921
+3.36292674685
+	 Processing /tmp/output_img_web_20200307_tmp/web099_0car.png
+		Bound dim: 494, ratio: 1.664948
+(479, 289)
+[[296.63226006 328.16250881 327.39805452 295.86780576]
+ [206.03715715 200.76016234 234.09099649 239.3679913 ]]
+31.9687857257
+33.3395995059
+0.958883315922
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web096_0car.png
+		Bound dim: 424, ratio: 1.458781
+(465, 355)
+[[385.61857555 427.81787749 425.29681818 383.09751624]
+ [220.37942989 211.39975667 228.67770496 237.65737817]]
+43.1441260876
+17.4609059598
+2.47089848527
+	 Processing /tmp/output_img_web_20200307_tmp/web088_0car.png
+		Bound dim: 530, ratio: 1.810056
+(371, 297)
+[[263.20748208 301.21233924 300.62125868 262.61640152]
+ [200.70097412 192.68691168 207.17321547 215.18727791]]
+38.8406277517
+14.4983576198
+2.67896742308
+	 Processing /tmp/output_img_web_20200307_tmp/web035_0car.png
+		Bound dim: 512, ratio: 1.779006
+(398, 296)
+[[ 91.7375006  156.81442459 156.16386716  91.08694318]
+ [173.91708788 177.91986521 197.94402911 193.94125178]]
+65.1999099788
+20.0347289682
+3.25434449761
+	 Processing /tmp/output_img_web_20200307_tmp/web040_0car.png
+		Bound dim: 370, ratio: 1.281690
+(386, 312)
+[[230.03612043 297.88187739 293.8049414  225.95918444]
+ [137.18270726 129.99145114 151.78053543 158.97179155]]
+68.2258081848
+22.1672190679
+3.07777930898
+	 Processing /tmp/output_img_web_20200307_tmp/web058_0car.png
+		Bound dim: 438, ratio: 1.510460
+(403, 273)
+[[263.44798055 297.19394451 296.55528298 262.80931903]
+ [178.7473504  174.71524202 199.78149372 203.8136021 ]]
+33.9859968423
+25.0743865876
+1.3554069099
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web036_0car.png
+		Bound dim: 414, ratio: 1.416382
+(502, 349)
+[[132.28887932 175.46257206 172.27441483 129.10072209]
+ [202.83378651 203.37283697 239.59665924 239.05760879]]
+43.1770578003
+36.363850823
+1.18736208688
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web041_0car.png
+		Bound dim: 380, ratio: 1.299145
+(396, 282)
+[[215.23634863 283.05836968 279.9843711  212.16235005]
+ [108.30778814  98.87113442 122.79602094 132.23267466]]
+68.4753749415
+24.1215601115
+2.83876227843
+	 Processing /tmp/output_img_web_20200307_tmp/web083_1car.png
+		Bound dim: 448, ratio: 1.529412
+(1440, 632)
+[[1152.21957805 1234.23032001 1232.24032108 1150.22957912]
+ [ 505.53897933  498.14788836  522.98866143  530.37975241]]
+82.3431237137
+24.9203551847
+3.30425160891
+	 Processing /tmp/output_img_web_20200307_tmp/web072_1car.png
+		Bound dim: 304, ratio: 1.029412
+!! License Plate NOT Found !!
+	 Processing /tmp/output_img_web_20200307_tmp/web083_3car.png
+		Bound dim: 456, ratio: 1.570588
+(1440, 632)
+[[353.84267457 412.65463921 410.42658657 351.61462194]
+ [450.88104559 458.88797171 477.64751091 469.6405848 ]]
+59.3545116218
+18.8913877147
+3.14188203207
+	 Processing /tmp/output_img_web_20200307_tmp/web077_0car.png
+		Bound dim: 504, ratio: 1.711340
+(632, 355)
+[[126.33853479 177.18478759 171.40099305 120.55474025]
+ [191.62622628 202.84171089 224.82591644 213.61043183]]
+52.0684983333
+22.7323024149
+2.29050702313
+	 Processing /tmp/output_img_web_20200307_tmp/web048_1car.png
+		Bound dim: 456, ratio: 1.542857
+(610, 409)
+[[196.90470191 248.43995603 251.39438891 199.85913479]
+ [277.10996677 285.27435869 303.6174011  295.45300917]]
+52.1779619501
+18.5794477393
+2.80836990864
+	 Processing /tmp/output_img_web_20200307_tmp/web042_0car.png
+		Bound dim: 514, ratio: 1.783133
+(552, 326)
+[[412.57019076 471.13291542 468.30284796 409.7401233 ]
+ [135.64028332 122.134013   146.89889363 160.40516395]]
+60.1000171159
+24.9260625509
+2.41113160144
+	 Processing /tmp/output_img_web_20200307_tmp/web084_0car.png
+		Bound dim: 410, ratio: 1.406593
+(727, 360)
+[[270.81598825 324.84860136 325.29302995 271.26041683]
+ [247.59864102 245.32816039 278.35520042 280.62568105]]
+54.080295507
+33.0300301218
+1.63730687825
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web044_0car.png
+		Bound dim: 524, ratio: 1.773913
+(627, 282)
+[[103.97767361 141.83736866 138.0529239  100.19322885]
+ [135.07828618 141.64067988 172.44227225 165.87987854]]
+38.4242309061
+31.0332098601
+1.23816489107
+! Two Lined !
+	 Processing /tmp/output_img_web_20200307_tmp/web100_0car.png
+		Bound dim: 534, ratio: 1.819209
+(415, 301)
+[[268.26904345 317.61367785 317.56871532 268.22408092]
+ [166.78718581 161.89167093 177.81344425 182.70895913]]
+49.5868834477
+15.9218368066
+3.11439465496
+	 Processing /tmp/output_img_web_20200307_tmp/web052_0car.png
+		Bound dim: 324, ratio: 1.118519
+!! License Plate NOT Found !!
+layer     filters    size              input                output
+    0 conv     32  3 x 3 / 1   240 x  80 x   3   ->   240 x  80 x  32  0.033 BFLOPs
+    1 max          2 x 2 / 2   240 x  80 x  32   ->   120 x  40 x  32
+    2 conv     64  3 x 3 / 1   120 x  40 x  32   ->   120 x  40 x  64  0.177 BFLOPs
+    3 max          2 x 2 / 2   120 x  40 x  64   ->    60 x  20 x  64
+    4 conv    128  3 x 3 / 1    60 x  20 x  64   ->    60 x  20 x 128  0.177 BFLOPs
+    5 conv     64  1 x 1 / 1    60 x  20 x 128   ->    60 x  20 x  64  0.020 BFLOPs
+    6 conv    128  3 x 3 / 1    60 x  20 x  64   ->    60 x  20 x 128  0.177 BFLOPs
+    7 max          2 x 2 / 2    60 x  20 x 128   ->    30 x  10 x 128
+    8 conv    256  3 x 3 / 1    30 x  10 x 128   ->    30 x  10 x 256  0.177 BFLOPs
+    9 conv    128  1 x 1 / 1    30 x  10 x 256   ->    30 x  10 x 128  0.020 BFLOPs
+   10 conv    256  3 x 3 / 1    30 x  10 x 128   ->    30 x  10 x 256  0.177 BFLOPs
+   11 conv    512  3 x 3 / 1    30 x  10 x 256   ->    30 x  10 x 512  0.708 BFLOPs
+   12 conv    256  3 x 3 / 1    30 x  10 x 512   ->    30 x  10 x 256  0.708 BFLOPs
+   13 conv    512  3 x 3 / 1    30 x  10 x 256   ->    30 x  10 x 512  0.708 BFLOPs
+   14 conv     80  1 x 1 / 1    30 x  10 x 512   ->    30 x  10 x  80  0.025 BFLOPs
+   15 detection
+mask_scale: Using default '1.000000'
+Loading weights from data/ocr/ocr-net.weights...Done!
+Performing OCR...
+	Scanning /tmp/output_img_web_20200307_tmp/web032_0car_lp.png
+! Two Lined !
+		LP: ZZZ5
+	Scanning /tmp/output_img_web_20200307_tmp/web033_0car_lp.png
+! Two Lined !
+		LP: 3
+	Scanning /tmp/output_img_web_20200307_tmp/web034_0car_lp.png
+		LP: F439I5
+	Scanning /tmp/output_img_web_20200307_tmp/web035_0car_lp.png
+		LP: SN7984
+	Scanning /tmp/output_img_web_20200307_tmp/web036_0car_lp.png
+! Two Lined !
+		LP: 6
+	Scanning /tmp/output_img_web_20200307_tmp/web037_0car_lp.png
+		LP: LK920
+	Scanning /tmp/output_img_web_20200307_tmp/web038_0car_lp.png
+! Two Lined !
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web039_0car_lp.png
+! Two Lined !
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web040_0car_lp.png
+		LP: UL58I7
+	Scanning /tmp/output_img_web_20200307_tmp/web041_0car_lp.png
+		LP: EZ8871
+	Scanning /tmp/output_img_web_20200307_tmp/web042_0car_lp.png
+		LP: JF5327
+	Scanning /tmp/output_img_web_20200307_tmp/web043_0car_lp.png
+! Two Lined !
+		LP: 3
+	Scanning /tmp/output_img_web_20200307_tmp/web044_0car_lp.png
+! Two Lined !
+		LP: J
+	Scanning /tmp/output_img_web_20200307_tmp/web047_0car_lp.png
+! Two Lined !
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web048_1car_lp.png
+		LP: 74J65
+	Scanning /tmp/output_img_web_20200307_tmp/web049_0car_lp.png
+		LP: UW040
+	Scanning /tmp/output_img_web_20200307_tmp/web050_0car_lp.png
+		LP: GP6
+	Scanning /tmp/output_img_web_20200307_tmp/web051_1car_lp.png
+! Two Lined !
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web054_0car_lp.png
+! Two Lined !
+		LP: J6Z7
+	Scanning /tmp/output_img_web_20200307_tmp/web055_0car_lp.png
+! Two Lined !
+		LP: T566
+	Scanning /tmp/output_img_web_20200307_tmp/web056_0car_lp.png
+! Two Lined !
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web057_0car_lp.png
+! Two Lined !
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web058_0car_lp.png
+! Two Lined !
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web059_0car_lp.png
+! Two Lined !
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web060_0car_lp.png
+! Two Lined !
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web061_0car_lp.png
+! Two Lined !
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web062_0car_lp.png
+		LP: 1KS000
+	Scanning /tmp/output_img_web_20200307_tmp/web063_0car_lp.png
+! Two Lined !
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web064_0car_lp.png
+! Two Lined !
+		LP: H
+	Scanning /tmp/output_img_web_20200307_tmp/web065_0car_lp.png
+! Two Lined !
+		LP: 4
+	Scanning /tmp/output_img_web_20200307_tmp/web066_0car_lp.png
+! Two Lined !
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web067_0car_lp.png
+! Two Lined !
+		LP: LZ42
+	Scanning /tmp/output_img_web_20200307_tmp/web068_0car_lp.png
+		LP: RR7333
+	Scanning /tmp/output_img_web_20200307_tmp/web069_0car_lp.png
+! Two Lined !
+		LP: 556
+	Scanning /tmp/output_img_web_20200307_tmp/web070_0car_lp.png
+! Two Lined !
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web071_0car_lp.png
+! Two Lined !
+		LP: AJ5
+	Scanning /tmp/output_img_web_20200307_tmp/web072_0car_lp.png
+! Two Lined !
+		LP: C7
+	Scanning /tmp/output_img_web_20200307_tmp/web073_0car_lp.png
+! Two Lined !
+		LP: FE
+	Scanning /tmp/output_img_web_20200307_tmp/web074_0car_lp.png
+		LP: VIBH3E9
+	Scanning /tmp/output_img_web_20200307_tmp/web075_0car_lp.png
+! Two Lined !
+		LP: 39
+	Scanning /tmp/output_img_web_20200307_tmp/web076_0car_lp.png
+! Two Lined !
+		LP: IFZ7
+	Scanning /tmp/output_img_web_20200307_tmp/web077_0car_lp.png
+		LP: PD6575
+	Scanning /tmp/output_img_web_20200307_tmp/web078_0car_lp.png
+! Two Lined !
+		LP: E777
+	Scanning /tmp/output_img_web_20200307_tmp/web079_0car_lp.png
+		LP: UV5295
+	Scanning /tmp/output_img_web_20200307_tmp/web080_0car_lp.png
+		LP: 6T
+	Scanning /tmp/output_img_web_20200307_tmp/web081_0car_lp.png
+! Two Lined !
+		LP: F826J4U05J
+	Scanning /tmp/output_img_web_20200307_tmp/web081_1car_lp.png
+		LP: VE5SE4
+	Scanning /tmp/output_img_web_20200307_tmp/web081_2car_lp.png
+		LP: VE5S44
+	Scanning /tmp/output_img_web_20200307_tmp/web083_0car_lp.png
+		LP: SY9498
+	Scanning /tmp/output_img_web_20200307_tmp/web083_1car_lp.png
+		LP: NAI700
+	Scanning /tmp/output_img_web_20200307_tmp/web083_2car_lp.png
+		LP: 700
+	Scanning /tmp/output_img_web_20200307_tmp/web083_3car_lp.png
+		LP: SY949
+	Scanning /tmp/output_img_web_20200307_tmp/web083_4car_lp.png
+		LP: 040I
+	Scanning /tmp/output_img_web_20200307_tmp/web084_0car_lp.png
+! Two Lined !
+		LP: SLL2Z6
+	Scanning /tmp/output_img_web_20200307_tmp/web084_1car_lp.png
+		LP: VE5594
+	Scanning /tmp/output_img_web_20200307_tmp/web084_2car_lp.png
+		LP: VE5584
+	Scanning /tmp/output_img_web_20200307_tmp/web085_0car_lp.png
+		LP: I073
+	Scanning /tmp/output_img_web_20200307_tmp/web085_1car_lp.png
+		LP: PS3J5I
+	Scanning /tmp/output_img_web_20200307_tmp/web086_0car_lp.png
+! Two Lined !
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web087_0car_lp.png
+		LP: E0444
+	Scanning /tmp/output_img_web_20200307_tmp/web088_0car_lp.png
+		LP: J697
+	Scanning /tmp/output_img_web_20200307_tmp/web089_0car_lp.png
+! Two Lined !
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web090_0car_lp.png
+! Two Lined !
+		LP: 5
+	Scanning /tmp/output_img_web_20200307_tmp/web091_0car_lp.png
+! Two Lined !
+		LP: KE5
+	Scanning /tmp/output_img_web_20200307_tmp/web092_0car_lp.png
+		LP: UJS2I0
+	Scanning /tmp/output_img_web_20200307_tmp/web093_0car_lp.png
+		LP: YS554
+	Scanning /tmp/output_img_web_20200307_tmp/web094_0car_lp.png
+		LP: VA68I
+	Scanning /tmp/output_img_web_20200307_tmp/web095_0car_lp.png
+! Two Lined !
+		LP: 3J
+	Scanning /tmp/output_img_web_20200307_tmp/web096_0car_lp.png
+		LP: A896J
+	Scanning /tmp/output_img_web_20200307_tmp/web097_0car_lp.png
+No characters found
+	Scanning /tmp/output_img_web_20200307_tmp/web098_0car_lp.png
+! Two Lined !
+		LP: 93
+	Scanning /tmp/output_img_web_20200307_tmp/web099_0car_lp.png
+! Two Lined !
+		LP: 3Z932
+	Scanning /tmp/output_img_web_20200307_tmp/web100_0car_lp.png
+		LP: AEI88
+	Scanning /tmp/output_img_web_20200307_tmp/web101_0car_lp.png
+		LP: Y86997
+	Scanning /tmp/output_img_web_20200307_tmp/web104_0car_lp.png
+! Two Lined !
+		LP: ZS
+	Scanning /tmp/output_img_web_20200307_tmp/web105_0car_lp.png
+! Two Lined !
+		LP: ITL9
+	Scanning /tmp/output_img_web_20200307_tmp/web106_0car_lp.png
+		LP: UP8993
+	Scanning /tmp/output_img_web_20200307_tmp/web107_0car_lp.png
+		LP: SB6723
+	Scanning /tmp/output_img_web_20200307_tmp/web108_0car_lp.png
+		LP: WMI280
+	Scanning /tmp/output_img_web_20200307_tmp/web109_0car_lp.png
+		LP: WMI280
+	Scanning /tmp/output_img_web_20200307_tmp/web109_1car_lp.png
+		LP: 74
+	Scanning /tmp/output_img_web_20200307_tmp/web110_0car_lp.png
+		LP: 74
+	Scanning /tmp/output_img_web_20200307_tmp/web110_1car_lp.png
+		LP: US4770

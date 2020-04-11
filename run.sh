@@ -87,10 +87,10 @@ fi
 set -e
 
 # Detect vehicles
-# python vehicle-detection.py $input_dir $output_dir
+python vehicle-detection.py $input_dir $output_dir
 
 # Detect license plates
-# python license-plate-detection.py $output_dir $lp_model $input_dir
+python license-plate-detection.py $output_dir $lp_model $input_dir
 
 # OCR
 python license-plate-ocr.py $output_dir

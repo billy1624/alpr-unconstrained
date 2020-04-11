@@ -1,4 +1,4 @@
-
+from src.label import Label
 import numpy as np
 import cv2
 
@@ -8,6 +8,10 @@ def draw_label(I,l,color=(255,0,0),thickness=1):
 	tl = tuple((l.tl()*wh).astype(int).tolist())
 	br = tuple((l.br()*wh).astype(int).tolist())
 	cv2.rectangle(I,tl,br,color,thickness=thickness)
+
+	pts = l.wh().reshape(2,1) + l.tl().reshape(2,1)
+	llp = Label(0,tl=pts.min(1),br=pts.max(1))
+	write2img(I,llp,l.pos())
 
 
 def draw_losangle(I,pts,color=(1.,1.,1.),thickness=1):

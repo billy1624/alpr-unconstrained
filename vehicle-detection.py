@@ -59,32 +59,50 @@ if __name__ == '__main__':
 					cx,cy,w,h = (np.array(r[2])/np.concatenate( (WH,WH) )).tolist()
 					tl = np.array([cx - w/2., cy - h/2.])
 					br = np.array([cx + w/2., cy + h/2.])
-					label = Label(0,tl,br)
+
+					pos = 'N/A'
+					center_x = (br[0] + tl[0]) / 2
+					height = br[1] - tl[1]
+
+					if height >= 0.2:
+						if center_x < 0.25:
+							pos = 'left'
+						elif center_x >= 0.25 and center_x <= 0.75:
+							pos = 'middle'
+						elif center_x > 0.75:
+							pos = 'right'
+
+					label = Label(0,tl,br,pos=pos)
+
+					print("{}, center_x={}, height={}, pos={}".format(label, center_x, height, pos))
+
 					Icar = crop_region(Iorig,label)
 
 					Lcars.append(label)
 
 					cv2.imwrite('%s/%s_%dcar.png' % (output_dir,bname,i),Icar)
+				
+				print('')
 
 				lwrite('%s/%s_cars.txt' % (output_dir,bname),Lcars)
 			
-			else:
+			# else:
 
-				Iorig = cv2.imread(img_path)
-				WH = np.array(Iorig.shape[1::-1],dtype=float)
-				Lcars = []
+			# 	Iorig = cv2.imread(img_path)
+			# 	WH = np.array(Iorig.shape[1::-1],dtype=float)
+			# 	Lcars = []
 
-				cx,cy,w,h = (np.array((0,0,WH[0],WH[1])) / np.concatenate( (WH,WH) )).tolist()
-				tl = np.array([cx, cy])
-				br = np.array([cx+w, cy+h])
-				label = Label(0,tl,br)
-				Icar = crop_region(Iorig,label)
+			# 	cx,cy,w,h = (np.array((0,0,WH[0],WH[1])) / np.concatenate( (WH,WH) )).tolist()
+			# 	tl = np.array([cx, cy])
+			# 	br = np.array([cx+w, cy+h])
+			# 	label = Label(0,tl,br)
+			# 	Icar = crop_region(Iorig,label)
 
-				Lcars.append(label)
+			# 	Lcars.append(label)
 
-				cv2.imwrite('%s/%s_%dcar.png' % (output_dir,bname,0),Icar)
+			# 	cv2.imwrite('%s/%s_%dcar.png' % (output_dir,bname,0),Icar)
 
-				lwrite('%s/%s_cars.txt' % (output_dir,bname),Lcars)
+			# 	lwrite('%s/%s_cars.txt' % (output_dir,bname),Lcars)
 
 	except:
 		traceback.print_exc()

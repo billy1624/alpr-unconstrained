@@ -6,11 +6,12 @@ from os.path import isfile
 
 class Label:
 
-	def __init__(self,cl=-1,tl=np.array([0.,0.]),br=np.array([0.,0.]),prob=None):
+	def __init__(self,cl=-1,tl=np.array([0.,0.]),br=np.array([0.,0.]),prob=None,pos='N/A'):
 		self.__tl 	= tl
 		self.__br 	= br
 		self.__cl 	= cl
 		self.__prob = prob
+		self.__pos  = pos
 
 	def __str__(self):
 		return 'Class: %d, top_left(x:%f,y:%f), bottom_right(x:%f,y:%f)' % (self.__cl, self.__tl[0], self.__tl[1], self.__br[0], self.__br[1])
@@ -35,6 +36,8 @@ class Label:
 	def area(self): return np.prod(self.wh())
 
 	def prob(self): return self.__prob
+
+	def pos(self): return self.__pos
 
 	def set_class(self,cl):
 		self.__cl = cl
@@ -66,23 +69,24 @@ def lread(file_path,label_type=Label):
 			cl 		= int(v[0])
 			ccx,ccy = float(v[1]),float(v[2])
 			w,h 	= float(v[3]),float(v[4])
-			prob 	= float(v[5]) if len(v) == 6 else None
+			prob 	= float(v[5]) if float(v[5]) != 0.0 else None
+			pos 	= str(v[6])
 
 			cc 	= np.array([ccx,ccy])
 			wh 	= np.array([w,h])
 
-			objs.append(label_type(cl,cc-wh/2,cc+wh/2,prob=prob))
+			objs.append(label_type(cl,cc-wh/2,cc+wh/2,prob=prob,pos=pos))
 
 	return objs
 
 def lwrite(file_path,labels,write_probs=True):
 	with open(file_path,'w') as fd:
 		for l in labels:
-			cc,wh,cl,prob = (l.cc(),l.wh(),l.cl(),l.prob())
+			cc,wh,cl,prob,pos = (l.cc(),l.wh(),l.cl(),l.prob(),l.pos())
 			if prob != None and write_probs:
-				fd.write('%d %f %f %f %f %f\n' % (cl,cc[0],cc[1],wh[0],wh[1],prob))
+				fd.write('%d %f %f %f %f %f %s\n' % (cl,cc[0],cc[1],wh[0],wh[1],prob,pos))
 			else:
-				fd.write('%d %f %f %f %f\n' % (cl,cc[0],cc[1],wh[0],wh[1]))
+				fd.write('%d %f %f %f %f 0.0 %s\n' % (cl,cc[0],cc[1],wh[0],wh[1],pos))
 
 
 def dknet_label_conversion(R,img_width,img_height):

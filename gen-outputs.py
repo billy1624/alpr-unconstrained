@@ -57,7 +57,6 @@ for img_file in img_files:
 				ptspx = pts*np.array(I.shape[1::-1],dtype=float).reshape(2,1)
 				draw_losangle(I,ptspx,RED,3)
 
-
 				# print ""
 				# print ""
 				# print lp_label

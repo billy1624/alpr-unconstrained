@@ -96,12 +96,14 @@ if __name__ == '__main__':
 				print("L:")
 				if len(L):
 					avg = []
+					max_tl_y = -999
 					for l in L:
 						print("{} {} wh={}\n".format(chr(l.cl()), l, l.wh()))
 						avg.append(l.wh())
+						max_tl_y = max(max_tl_y, l.tl()[1])
 					avg = np.array(avg)
 					avg = np.average(avg, axis=0)
-					minimum_tl_y = avg[1] / 2
+					minimum_tl_y = max_tl_y - avg[1] / 2
 					print(avg)
 					print(minimum_tl_y)
 					print_L = []
@@ -112,6 +114,10 @@ if __name__ == '__main__':
 							print_L.append(l)
 					lp_str += ''.join([chr(l.cl()) for l in print_L])
 
+			lp_str = lp_str.replace('Q', '0')
+			lp_str = lp_str.replace('O', '0')
+			lp_str = lp_str.replace('I', '1')
+			
 			if len(lp_str):
 				with open('%s/%s_str.txt' % (output_dir,bname),'w') as f:
 					f.write(lp_str + '\n')

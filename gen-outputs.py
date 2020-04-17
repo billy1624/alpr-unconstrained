@@ -21,8 +21,8 @@ YELLOW = (  0,255,255)
 RED    = (  0,  0,255)
 
 input_dir = sys.argv[1]
-tmp_dir = sys.argv[2] + '_tmp'
-output_dir = sys.argv[2] + '_out'
+tmp_dir = sys.argv[1] + '_tmp'
+output_dir = sys.argv[1] + '_out'
 
 if not isdir(output_dir):
 	makedirs(output_dir)
@@ -39,7 +39,7 @@ for img_file in img_files:
 
 	Lcar = lread(detected_cars_labels)
 
-	sys.stdout.write('%s' % bname)
+	# sys.stdout.write('%s' % bname)
 
 	if Lcar:
 
@@ -82,9 +82,9 @@ for img_file in img_files:
 					llp = Label(0,tl=pts.min(1),br=pts.max(1))
 					write2img(I,llp,lp_str)
 
-					sys.stdout.write(',%s' % lp_str)
+					# sys.stdout.write(',%s' % lp_str)
 
 	cv2.imwrite('%s/%s_output.png' % (output_dir,bname),I)
-	sys.stdout.write('\n')
+	# sys.stdout.write('\n')
 
 

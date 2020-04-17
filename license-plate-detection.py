@@ -27,7 +27,7 @@ if __name__ == '__main__':
 		
 		input_dir  = sys.argv[1] + '_tmp'
 		output_dir = input_dir
-		source_dir  = sys.argv[3]
+		source_dir  = sys.argv[1]
 
 		lp_threshold = .5
 

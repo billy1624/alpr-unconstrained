@@ -17,7 +17,7 @@ if __name__ == '__main__':
 	try:
 	
 		input_dir  = sys.argv[1]
-		output_dir = sys.argv[2] + '_tmp'
+		output_dir = sys.argv[1] + '_tmp'
 
 		vehicle_threshold = .5
 
@@ -76,11 +76,11 @@ if __name__ == '__main__':
 
 					print("{}, center_x={}, height={}, pos={}".format(label, center_x, height, pos))
 
-					Icar = crop_region(Iorig,label)
-
 					Lcars.append(label)
 
-					cv2.imwrite('%s/%s_%dcar.png' % (output_dir,bname,i),Icar)
+					if pos == 'middle':
+						Icar = crop_region(Iorig,label)
+						cv2.imwrite('%s/%s_%dcar.png' % (output_dir,bname,i),Icar)
 				
 				print('')
 

@@ -64,7 +64,6 @@ done
 
 if [ -z "$input_dir"  ]; then echo "Input dir not set."; usage; exit 1; fi
 if [ -z "$output_dir" ]; then echo "Ouput dir not set."; usage; exit 1; fi
-if [ -z "$csv_file"   ]; then echo "CSV file not set." ; usage; exit 1; fi
 
 # Check if input dir exists
 check_dir $input_dir
@@ -86,17 +85,20 @@ fi
 # End if any error occur
 set -e
 
+# Preprocess images
+python image-preprocessing.py $input_dir $output_dir
+
 # Detect vehicles
-python vehicle-detection.py $input_dir $output_dir
+python vehicle-detection.py $output_dir
 
 # Detect license plates
-python license-plate-detection.py $output_dir $lp_model $input_dir
+python license-plate-detection.py $output_dir $lp_model
 
 # OCR
 python license-plate-ocr.py $output_dir
 
 # Draw output and generate list
-python gen-outputs.py $input_dir $output_dir > $csv_file
+python gen-outputs.py $output_dir
 # python gen-outputs.py $input_dir $output_dir
 
 # Clean files and draw output

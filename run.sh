@@ -34,6 +34,7 @@ lp_model="data/lp-detector/wpod-net_update1.h5"
 input_dir=''
 output_dir=''
 csv_file=''
+is_api=0
 
 
 # Check # of arguments
@@ -62,31 +63,33 @@ while getopts 'i:o:c:l:h' OPTION; do
 	esac
 done
 
+date_time=$(date +'%Y%m%d_%H%M%S')
+
 if [ -z "$input_dir"  ]; then echo "Input dir not set."; usage; exit 1; fi
-if [ -z "$output_dir" ]; then echo "Ouput dir not set."; usage; exit 1; fi
+if [ -z "$output_dir" ]; then output_dir="/tmp/alpr_$date_time"; is_api=1; fi
 
-# Check if input dir exists
-check_dir $input_dir
-retval=$?
-if [ $retval -eq 0 ]
-then
-	echo "Input directory ($input_dir) does not exist"
-	exit 1
-fi
+# # Check if input dir exists
+# check_dir $input_dir
+# retval=$?
+# if [ $retval -eq 0 ]
+# then
+# 	echo "Input directory ($input_dir) does not exist"
+# 	exit 1
+# fi
 
-# Check if output dir exists, if not, create it
-check_dir $output_dir
-retval=$?
-if [ $retval -eq 0 ]
-then
-	mkdir -p $output_dir
-fi
+# # Check if output dir exists, if not, create it
+# check_dir $output_dir
+# retval=$?
+# if [ $retval -eq 0 ]
+# then
+# 	mkdir -p $output_dir
+# fi
 
 # End if any error occur
 set -e
 
 # Preprocess images
-python image-preprocessing.py $input_dir $output_dir
+python image-preprocessing.py $input_dir $output_dir $is_api
 
 # Detect vehicles
 python vehicle-detection.py $output_dir
@@ -98,10 +101,19 @@ python license-plate-detection.py $output_dir $lp_model
 python license-plate-ocr.py $output_dir
 
 # Draw output and generate list
-python gen-outputs.py $output_dir
-# python gen-outputs.py $input_dir $output_dir
+python gen-outputs.py $output_dir $is_api
 
 # Clean files and draw output
+# if [ $is_api -eq 1 ]
+# then
+# 	echo ""
+# 	echo "Removing tmp files..."
+# 	echo "rm -r ${output_dir}"
+# 	rm -r ${output_dir}
+# 	echo "rm -r ${output_dir}_*"
+# 	rm -r ${output_dir}_*
+# fi
+
 # rm $output_dir/*_lp.png
 # rm $output_dir/*car.png
 # rm $output_dir/*_cars.txt

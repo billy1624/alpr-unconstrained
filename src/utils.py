@@ -63,6 +63,14 @@ def image_files_from_folder(folder,upper=True):
 	return img_files
 
 
+def image_files_from_api(path_string):
+	img_files  = []
+	paths_ids  = path_string.split(';')
+	for path_id in paths_ids:
+		img_files.append(tuple(path_id.split(':')))
+	return img_files
+
+
 def is_inside(ltest,lref):
 	return (ltest.tl() >= lref.tl()).all() and (ltest.br() <= lref.br()).all()
 

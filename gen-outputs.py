@@ -9,6 +9,8 @@ from src.utils 					import crop_region, image_files_from_folder
 from src.drawing_utils			import draw_label, draw_losangle, write2img
 from src.label 					import lread, Label, readShapes
 from math						import sqrt
+import re
+import json
 
 from pdb import set_trace as pause
 
@@ -20,18 +22,26 @@ def dist(pt0, pt1):
 YELLOW = (  0,255,255)
 RED    = (  0,  0,255)
 
-input_dir = sys.argv[1]
-tmp_dir = sys.argv[1] + '_tmp'
+input_dir  = sys.argv[1]
+tmp_dir    = sys.argv[1] + '_tmp'
 output_dir = sys.argv[1] + '_out'
+is_api     = sys.argv[2]
 
 if not isdir(output_dir):
 	makedirs(output_dir)
 
 img_files = image_files_from_folder(input_dir)
 
+api_json_data = {}
+
 for img_file in img_files:
 
 	bname = splitext(basename(img_file))[0]
+
+	parking_space_id = None
+	if is_api == '1':
+		parking_space_id = re.search(r'^ID([^_]+)_', bname).group(1)
+		# print("parking_space_id:", parking_space_id)
 
 	I = cv2.imread(img_file)
 
@@ -44,6 +54,8 @@ for img_file in img_files:
 	if Lcar:
 
 		for i,lcar in enumerate(Lcar):
+
+			plate = None
 
 			draw_label(I,lcar,color=YELLOW,thickness=3)
 
@@ -81,10 +93,28 @@ for img_file in img_files:
 						lp_str = f.read().strip()
 					llp = Label(0,tl=pts.min(1),br=pts.max(1))
 					write2img(I,llp,lp_str)
+					plate = lp_str
 
 					# sys.stdout.write(',%s' % lp_str)
+			
+			if parking_space_id in api_json_data:
+				api_json_data[parking_space_id][lcar.pos()] = plate
+			else:
+				api_json_data[parking_space_id] = {lcar.pos(): plate}
 
 	cv2.imwrite('%s/%s_output.png' % (output_dir,bname),I)
 	# sys.stdout.write('\n')
 
+api_json = { 'data': [] }
 
+for parking_space_id in api_json_data.keys():
+	for pos in ['middle', 'left', 'right']:
+		row = { 'id':int(parking_space_id), 'position':pos, 'detected':False, 'plate':None }
+		if pos in api_json_data[parking_space_id]:
+			row['plate'] = api_json_data[parking_space_id][pos]
+			row['detected'] = True
+		api_json['data'].append(row)
+
+print ""
+print "api_json:"
+print json.dumps(api_json)

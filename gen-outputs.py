@@ -123,7 +123,7 @@ print json.dumps(api_json)
 POST_URL = 'http://42.98.51.25:8080/api/parkingspaces/result'
 
 print ""
-print "Posting to url: "
+print "Posting to url:", POST_URL
 r = requests.post(POST_URL, json=api_json)
 print "Status Code:", r.status_code
 print "Response:", r.json()

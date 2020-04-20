@@ -1,6 +1,7 @@
 import sys
 import cv2
 import numpy as np
+import requests
 
 from glob						import glob
 from os.path 					import splitext, basename, isfile, isdir
@@ -118,3 +119,11 @@ for parking_space_id in api_json_data.keys():
 print ""
 print "api_json:"
 print json.dumps(api_json)
+
+POST_URL = 'http://42.98.51.25:8080/api/parkingspaces/result'
+
+print ""
+print "Posting to url: "
+r = requests.post(POST_URL, json=api_json)
+print "Status Code:", r.status_code
+print "Response:", r.json()

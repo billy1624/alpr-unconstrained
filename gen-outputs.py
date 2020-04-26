@@ -97,33 +97,37 @@ for img_file in img_files:
 					plate = lp_str
 
 					# sys.stdout.write(',%s' % lp_str)
-			
-			if parking_space_id in api_json_data:
-				api_json_data[parking_space_id][lcar.pos()] = plate
-			else:
-				api_json_data[parking_space_id] = {lcar.pos(): plate}
+			if is_api == '1':
+				if parking_space_id in api_json_data:
+					api_json_data[parking_space_id][lcar.pos()] = plate
+				else:
+					api_json_data[parking_space_id] = {lcar.pos(): plate}
 
 	cv2.imwrite('%s/%s_output.png' % (output_dir,bname),I)
 	# sys.stdout.write('\n')
 
-api_json = { 'data': [] }
 
-for parking_space_id in api_json_data.keys():
-	for pos in ['middle', 'left', 'right']:
-		row = { 'id':int(parking_space_id), 'position':pos, 'detected':False, 'plate':None }
-		if pos in api_json_data[parking_space_id]:
-			row['plate'] = api_json_data[parking_space_id][pos]
-			row['detected'] = True
-		api_json['data'].append(row)
+if is_api == '1':
 
-print ""
-print "api_json:"
-print json.dumps(api_json)
+	api_json = { 'data': [] }
 
-POST_URL = 'http://42.98.51.25:8080/api/parkingspaces/result'
+	for parking_space_id in api_json_data.keys():
+		for pos in ['middle', 'left', 'right']:
+			row = { 'id':int(parking_space_id), 'position':pos, 'detected':False, 'plate':None }
+			if pos in api_json_data[parking_space_id]:
+				row['plate'] = api_json_data[parking_space_id][pos]
+				row['detected'] = True
+			api_json['data'].append(row)
 
-print ""
-print "Posting to url:", POST_URL
-r = requests.post(POST_URL, json=api_json)
-print "Status Code:", r.status_code
-print "Response:", r.json()
+	print ""
+	print "api_json:"
+	print json.dumps(api_json)
+
+	# POST_URL = 'http://42.98.51.25:8080/api/parkingspaces/result'
+	POST_URL = 'http://localhost:8080/api/parkingspaces/result'
+
+	print ""
+	print "Posting to url:", POST_URL
+	r = requests.post(POST_URL, json=api_json)
+	print "Status Code:", r.status_code
+	print "Response:", r.json()

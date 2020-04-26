@@ -47,10 +47,11 @@ if __name__ == '__main__':
             if is_api == '1':
                 id_str = 'ID' + parking_space_id + '_'
 
-            # cv2.imwrite('%s/%s%s.jpg' % (output_dir,id_str,bname),img)
-            # cv2.imwrite('%s/%s%s_lighten.jpg' % (output_dir,id_str,bname),img_output)
-
-            cv2.imwrite('%s/%s%s.jpg' % (output_dir,id_str,bname),img_output)
+            if is_api == '1':
+                cv2.imwrite('%s/%s%s.jpg' % (output_dir,id_str,bname),img_output)
+            else:
+                cv2.imwrite('%s/%s%s.jpg' % (output_dir,id_str,bname),img)
+                cv2.imwrite('%s/%s%s_lighten.jpg' % (output_dir,id_str,bname),img_output)
 
     except:
         traceback.print_exc()

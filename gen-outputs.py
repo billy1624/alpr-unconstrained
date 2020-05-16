@@ -131,3 +131,16 @@ if is_api == '1':
 	r = requests.post(POST_URL, json=api_json)
 	print "Status Code:", r.status_code
 	print "Response:", r.json()
+
+	# [
+	# 	{
+	# 		'id': 60,
+	# 		'position': 'middle',
+	# 		'plate': 'KV6389'
+	# 	},
+	# 	{
+	# 		'id': 60,
+	# 		'position': 'left',
+	# 		'plate': null
+	# 	}
+	# ]

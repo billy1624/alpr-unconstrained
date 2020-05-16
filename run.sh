@@ -38,6 +38,8 @@ input_dir=''
 output_dir=''
 csv_file=''
 is_api=0
+keep_original_image=0
+sampling=0
 
 
 # Check # of arguments
@@ -56,12 +58,14 @@ usage() {
 	exit 1
 }
 
-while getopts 'i:o:c:l:h' OPTION; do
+while getopts 'i:o:c:l:k:s:h' OPTION; do
 	case $OPTION in
 		i) input_dir=$OPTARG;;
 		o) output_dir=$OPTARG;;
 		c) csv_file=$OPTARG;;
 		l) lp_model=$OPTARG;;
+		k) keep_original_image=$OPTARG;;
+		s) sampling=$OPTARG;;
 		h) usage;;
 	esac
 done
@@ -70,6 +74,8 @@ date_time=$(date +'%Y%m%d_%H%M%S')
 
 if [ -z "$input_dir"  ]; then echo "Input dir not set."; usage; exit 1; fi
 if [ -z "$output_dir" ]; then output_dir="/tmp/alpr_$date_time"; is_api=1; fi
+if [ -z "$keep_original_image" ]; then keep_original_image=0; fi
+if [ -z "$sampling" ]; then sampling=0; fi
 
 # # Check if input dir exists
 # check_dir $input_dir
@@ -92,7 +98,7 @@ if [ -z "$output_dir" ]; then output_dir="/tmp/alpr_$date_time"; is_api=1; fi
 set -e
 
 # Preprocess images
-python image-preprocessing.py $input_dir $output_dir $is_api
+python image-preprocessing.py $input_dir $output_dir $is_api $keep_original_image $sampling
 
 # Detect vehicles
 python vehicle-detection.py $output_dir
@@ -107,15 +113,17 @@ python license-plate-ocr.py $output_dir
 python gen-outputs.py $output_dir $is_api
 
 # Clean files and draw output
-# if [ $is_api -eq 1 ]
-# then
-# 	echo ""
-# 	echo "Removing tmp files..."
-# 	echo "rm -r ${output_dir}"
-# 	rm -r ${output_dir}
-# 	echo "rm -r ${output_dir}_*"
-# 	rm -r ${output_dir}_*
-# fi
+if [ $is_api -eq 1 ]
+then
+	echo ""
+	echo "Removing tmp files..."
+	echo "rm -r ${output_dir}"
+	rm -r ${output_dir}
+	echo "rm -r ${output_dir}_tmp"
+	rm -r ${output_dir}_tmp
+	echo "rm -r ${output_dir}_out"
+	rm -r ${output_dir}_out
+fi
 
 # rm $output_dir/*_lp.png
 # rm $output_dir/*car.png
